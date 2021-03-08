@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*					링크 설정 				*/
+a:link{text-decoration: none; color:black;}
+a:visited{text-decoration:none; color:black;}
+a:hover{text-decoration:none;color:black;}
+a:active{text-decoration:none;color:black;}
+body{
+	margin:0px;
+}
+hr{
+	border:0px;
+	height:1px;
+	background-color:#e4e4e4;
+}
+/*					상부					*/
+#header{
+	width:1000px;
+	margin:10px auto;
+	height:40px;
+	line-height:30px;
+}
+#header>span:first-child {
+	font-size: 12pt;
+	font-family: Cooper;
+	font-weight: bold;
+}
+#header>span:nth-of-type(2) {
+	font-size: 18pt;
+	font-family:hy견고딕;
+}
+#header>span:nth-of-type(3),#header>span:nth-of-type(4)>a{
+	color:#aaa;
+	font-size:11pt;
+	font-family:hy견고딕;
+}
+#header>span:nth-of-type(4)>a{
+	margin-right:20px;
+}
+
+/*				검색창				*/
+#header>span:nth-of-type(5){
+	display:inline-block;
+	height:30px;
+	width:270px;
+	line-height:25px;
+	padding:5px 6px 5px 10px;
+	border : solid 1px #ddd;
+}
+#searchIcon{
+	width:30px;
+	height:30px;
+	position:relative;
+	float:right;
+	opacity: 0.3;
+}
+#searchTxt{
+	text-indent:0.2em;
+	border:white;
+}
+#searchTxt:focus{
+	border:solid 1px #aaa;
+	border-radius:7px;
+}
+#header>span:nth-of-type(5)>input::placeholder{
+	font-size:9pt;
+}
+
+
+/*			로그인 및 버튼					*/
+#service_icon,#login{
+	float:right;
+	margin:0 5px;	
+}
+#login{
+	margin-top:5px;
+	border:1px solid #ddd;
+	color: rgb(102,102,102);
+	font-size:9pt;
+	padding:3px 8px;
+	text-align:center;
+	background-color:white;
+}
+#service_icon{
+	margin-top:9px;
+	width:17px;
+	height:17px;
+	opacity: 0.3;
+	
+}

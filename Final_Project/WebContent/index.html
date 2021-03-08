@@ -3,8 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#searchTxt').click(function(){
+			$('#searchTxt').attr('placeholder','');
+		});
+		$('#searchTxt').focusout(function(){
+			$('#searchTxt').attr('placeholder','제목/작가로 검색할 수 있습니다.');
+		});
+		//$('#service_icon').
+		$('#service_icon').hover(function(){
+			$('#service_icon').css('opacity','1.0');
+		});
+		$('#service_icon').mouseleave(function(){
+			$('#service_icon').css('opacity','0.5');
+		});
+	});
+</script>
 </head>
 <body>
-git 사용법을 알아보자~
+<div id="header">
+	<span><a href="#">NAVER</a></span>
+	<span><a href="#">만화 </a></span>
+	<span>|</span>
+	<span><a href="#">웹소설</a></span>
+	<span>
+		<input id ="searchTxt" type="text" size="32em" placeholder="제목/작가로 검색할 수 있습니다." />
+		<a href="#"><img src="img/search_icon.png" id="searchIcon"/></a>
+	</span>
+	
+	<a href="#"><img src="img/service_icon.png" id="service_icon"/></a>
+	<input id="login" type="button" value="로그인"/>
+</div>
+<hr/>
 </body>
 </html>
