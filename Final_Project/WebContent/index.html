@@ -6,20 +6,41 @@
 <link rel="stylesheet" href="style.css" type="text/css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-	$(document).ready(function(){
+	$(function(){
+		//#searchTxt placeholder 설정
 		$('#searchTxt').click(function(){
 			$('#searchTxt').attr('placeholder','');
 		});
 		$('#searchTxt').focusout(function(){
 			$('#searchTxt').attr('placeholder','제목/작가로 검색할 수 있습니다.');
 		});
-		//$('#service_icon').
+		//#service_icon 설정
 		$('#service_icon').hover(function(){
 			$('#service_icon').css('opacity','1.0');
 		});
 		$('#service_icon').mouseleave(function(){
 			$('#service_icon').css('opacity','0.5');
 		});
+		var titleStr = new Array('홈','웹툰','베스트 도전','도전만화','마이페이지','|','단행본 만화','장르소설');
+		for(var i=0; i<titleStr.length; i++){
+			
+			if(i!=5){
+				$('#titleMenu').append('<li><a href="#">'+titleStr[i]+'</a></li>');
+			} else {
+				$('#titleMenu').append('<li>'+titleStr[i]+'</li>');	
+			}
+		}
+		var genre = new Array('요일별','장르별','작품별','작가별','연도별','테마웹툰','완결웹툰');
+		for(var i=0; i<genre.length;i++){
+			$('#genre').append('<li><a href="#">'+genre[i]+'</a></li>');	
+		}
+		$('#genre a').click(function(){
+			console.log($(this).css('color'));
+			if($(this).css('color')=='rgb(133, 133, 133)'){
+				$(this).css('color','black');
+			}
+			
+		})
 	});
 </script>
 </head>
@@ -37,6 +58,21 @@
 	<a href="#"><img src="img/service_icon.png" id="service_icon"/></a>
 	<input id="login" type="button" value="로그인"/>
 </div>
-<hr/>
+<hr>
+<div id="title">
+	<ul id="titleMenu">
+	
+	</ul>
+</div>
+<div id="updateDiv">
+</div>
+<hr>
+<div id="genreDiv">
+	<ul id="genre">
+		
+	</ul>
+</div>
+<hr>
+
 </body>
 </html>

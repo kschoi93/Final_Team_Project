@@ -7,11 +7,26 @@ a:active{text-decoration:none;color:black;}
 body{
 	margin:0px;
 }
-hr{
+hr:nth-of-type(1){
 	border:0px;
+	margin-bottom:8px;
 	height:1px;
 	background-color:#e4e4e4;
 }
+hr:nth-of-type(2){
+	border:0px;
+	margin:8px 0px 8px 0px;
+	height:1px;
+	background-color:#e4e4e4;
+}
+hr:nth-of-type(3){
+	border:0px;
+	margin:4px 0px 4px 0px;
+	height:1px;
+	background-color:#e4e4e4;
+}
+
+/*===========================================================header==================================*/
 /*					상부					*/
 #header{
 	width:1000px;
@@ -37,10 +52,10 @@ hr{
 	margin-right:20px;
 }
 
-/*				검색창				*/
+/*-----------------------------------------------------------	검색창------------------*/
 #header>span:nth-of-type(5){
 	display:inline-block;
-	height:30px;
+	height:25px;
 	width:270px;
 	line-height:25px;
 	padding:5px 6px 5px 10px;
@@ -49,11 +64,11 @@ hr{
 #searchIcon{
 	width:30px;
 	height:30px;
-	position:relative;
 	float:right;
 	opacity: 0.3;
 }
 #searchTxt{
+	font-size:0.8em;
 	text-indent:0.2em;
 	border:white;
 }
@@ -66,7 +81,7 @@ hr{
 }
 
 
-/*			로그인 및 버튼					*/
+/*--------------------------------------------------------로그인 및 버튼---------------*/
 #service_icon,#login{
 	float:right;
 	margin:0 5px;	
@@ -86,4 +101,58 @@ hr{
 	height:17px;
 	opacity: 0.3;
 	
+}
+
+/*======================================title===================================*/
+#title{
+	width:1000px;
+	height:30px;
+	line-height:30px;
+	margin:0 auto;
+}
+ul{
+	margin:0px;
+	padding:0px;
+}
+#titleMenu>li{
+	height:30px;
+	float:left;
+	padding:0px 12px;
+	font-family:문체부 돋움체;
+	font-size:0.9em;
+	font-weight: bold;
+	letter-spacing:-1px;
+	word-spacing: -1px;
+	list-style: none;
+}
+#titleMenu>li:nth-child(n+6), 
+#titleMenu>li:nth-child(n+6)>a:visited,
+#titleMenu>li:nth-child(n+6)>a:link,
+#titleMenu>li:nth-child(n+6)>a:active,
+#titleMenu>li:nth-child(n+6)>a:hover,
+#genre>li>a:visited,
+#genre>li>a:link,
+#genre>li>a:active,
+#genre>li>a:hover{
+	color:rgb(133, 133, 133);
+}
+/*=============================================genre=================================*/
+#genreDiv{
+	width:100%;
+	height:30px;
+}
+#genre{
+	width:1000px;
+	height:30px;
+	margin:0px auto;
+}
+#genre>li{
+	height:30px;
+	line-height:30px;
+	float:left;
+	list-style:none;
+	margin:0px 16px 0px 4px;
+	font-size:0.8em;
+	font-weight:bold;
+	color:rgb(133, 133, 133);
 }
