@@ -35,12 +35,22 @@
 			$('#genre').append('<li><a href="#">'+genre[i]+'</a></li>');	
 		}
 		$('#genre a').click(function(){
+			$('#genre a').css('color','rgb(133, 133, 133)');
 			console.log($(this).css('color'));
 			if($(this).css('color')=='rgb(133, 133, 133)'){
 				$(this).css('color','black');
 			}
 			
 		})
+		
+		var tag;
+		var rankStr = ['급식아빠-8화 저 새끼야? 우리 애들을 밟았다는 게?','전지적 독자 시점-042 Ep.09 전지적 개복치 (6)'
+				,'고수-2부 138화','복학왕-334화 청첩장 4화','납주의 첫날밤을 가져버렸다-36화'
+				,'여주실격!-65화 인연(1)','튜토리얼 탑의 고인물-46화','원수를 사랑하라-72화','나쁜사람-32화'
+				,'연놈-265화. 원상고 바람의 복학생 (독대)'];
+		for(var i=1; i < rankStr.length+1;i++){
+			$('#rank>ul').append('<li><span>'+i+'</span><span id="wordCut">'+rankStr[i-1] +'</span><span>-</span><span>0</span></li>');
+		}
 	});
 </script>
 </head>
@@ -73,6 +83,21 @@
 	</ul>
 </div>
 <hr>
-
+<div id="section">
+	<div id="sectionLeft"></div>
+	<div id="sectionRight">
+		<a href="#"><div id="banner1">웹툰 올리기</div></a>
+		<a href="#"><div id="banner2"><img src="img/testimg1.JPG"/></div></a>
+		<a href="#"><div id="banner3"><img src="img/testimg2.JPG"/></div></a>
+		<div id="rank">
+			<div>인기급상승 만화</div>
+			<div>인기순</div>
+			<div>업데이트순</div>
+			<ul>
+			
+			</ul>
+		</div>
+	</div>
+</div>
 </body>
 </html>
