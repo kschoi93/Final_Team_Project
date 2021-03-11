@@ -10,8 +10,11 @@
 
 > 추후 Final Team Project에 사용될 예정이다.
 
+
 ■ Toy Project : naver webtoon page ( https://comic.naver.com/webtoon/weekday.nhn );
+
 > 20201. 03. 05 ~ 진행중
+
 > 부여된 페이지
  - index page -> 최경식
  - mon page -> 차윤주
