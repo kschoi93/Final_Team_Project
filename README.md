@@ -1,5 +1,6 @@
-  Final Team Project 😎
-  BITCAMP 2020-12-14~2021-05-28 Final Team Project
+■ Final Team Project 😎
+
+■ BITCAMP 2020-12-14~2021-05-28 Final Team Project
 
 > 비트캠프 자바 교육과정 마지막 팀 프로젝트를 위해 생성한 Git Repository
 
@@ -9,7 +10,7 @@
 
 > 추후 Final Team Project에 사용될 예정이다.
 
-  Toy Project : naver webtoon page ( https://comic.naver.com/webtoon/weekday.nhn );
+■ Toy Project : naver webtoon page ( https://comic.naver.com/webtoon/weekday.nhn );
 > 20201. 03. 05 ~ 진행중
 > 부여된 페이지
  - index page -> 최경식
