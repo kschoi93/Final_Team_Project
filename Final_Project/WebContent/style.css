@@ -4,18 +4,19 @@ a:link{text-decoration: none; color:black;}
 a:visited{text-decoration:none; color:black;}
 a:hover{text-decoration:none;color:black;}
 a:active{text-decoration:none;color:black;}
+
 body{
 	margin:0px;
 }
 hr:nth-of-type(1){
 	border:0px;
-	margin-bottom:8px;
 	height:1px;
 	background-color:#e4e4e4;
+	margin:0px;
 }
 hr:nth-of-type(2){
 	border:0px;
-	margin:8px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
 	height:1px;
 	background-color:#e4e4e4;
 }
@@ -26,7 +27,9 @@ hr:nth-of-type(3){
 	background-color:#e4e4e4;
 }
 
-/*===========================================================header==================================*/
+
+
+/*===========================================================header===================================================================*/
 /*					상부					*/
 #header{
 	width:1000px;
@@ -103,11 +106,13 @@ hr:nth-of-type(3){
 	
 }
 
-/*======================================title===================================*/
+
+
+/*======================================title======================================================================================*/
 #title{
 	width:1000px;
-	height:30px;
-	line-height:30px;
+	height:40px;
+	line-height:40px;
 	margin:0 auto;
 }
 ul{
@@ -115,9 +120,9 @@ ul{
 	padding:0px;
 }
 #titleMenu>li{
-	height:30px;
+	height:34px;
 	float:left;
-	padding:0px 12px;
+	padding:3px 12px;
 	font-family:나눔고딕;
 	font-size:0.9em;
 	font-weight: bold;
@@ -125,6 +130,10 @@ ul{
 	word-spacing: -1px;
 	list-style: none;
 }
+#titleMenu>li:nth-of-type(2){
+	background-color:rgb(0,213,100);
+}
+#titleMenu>li:nth-of-type(2)>a{color:white;}
 #titleMenu>li:nth-child(n+6), 
 #titleMenu>li:nth-child(n+6)>a:visited,
 #titleMenu>li:nth-child(n+6)>a:link,
@@ -143,7 +152,9 @@ ul{
 #genre>li:first-child>a:hover{
 	color:black;
 }
-/*=============================================genre=================================*/
+
+
+/*=============================================genre================================================================================*/
 #genreDiv{
 	width:100%;
 	height:30px;
@@ -167,11 +178,13 @@ ul{
 	color:rgb(133, 133, 133);
 	font-family:나눔고딕;
 }
-/*=============================================section=================================*/
+
+
+
+/*=============================================section===============================================================================*/
 #section{
 	width:1000px;
 	height:1000px;
-	background-color:lightblue;
 	margin:0 auto;
 }
 /*-----------------------------------------------section>sectionleft--------------*/
@@ -223,7 +236,11 @@ ul{
 }
 /*-------------------------------------------------banner rank------------------------*/
 #rank{
-	border:1px solid black;
+	width:240px;
+	border-top:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+	border-left:1px solid #e1e1e1;
+	overflow:auto;
 }
 #rank>div:first-child{
 	text-indent:0.4em;
@@ -231,29 +248,100 @@ ul{
 	height:25px;
 	line-height:25px;
 }
-#rank>div:nth-of-type(2),#rank>div:nth-of-type(3){
+/* 인기순 업데이트순 글자*/
+#rank>a:nth-of-type(1)>div,#rank>a:nth-of-type(2)>div{
 	text-align:center;
-	height:30px;
-	line-height:30px;
+	padding:5px 0px 0px 0px;
+	height:25px;
 	font-size:0.8em;
 }
-#rank>div:nth-of-type(2){
+#rank>a:nth-of-type(1)>div{
 	width:119px;
 	float:left;
-	border-top:1px solid black;
-	border-bottom:1px solid black;
-	border-right:1px solid black;
+	border-top:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+	color:rgb(133,133,133);
 }
-#rank>div:nth-of-type(3){
+#rank>a:nth-of-type(2)>div{
 	width:120px;
 	float:right;
-	border-top:1px solid black;
-	border-bottom:1px solid black;
+	border-top:1px solid #e1e1e1;
+	border-bottom:1px solid #e1e1e1;
+	color:rgb(133,133,133);
 }
-#rank>ul,#rank li{width:240px;padding:0px; margin:0px;list-style: none;float:left;}
+#rank>a>div>div{
+	width:119px;
+	height:5px;
+	color:orange;
+	font-size:0.1px;
+	-webkit-transform:scale(0.7);
+}
+
+
+/* 랭크 1~10위 */
+#rank>ul,#rank li{width:230px;padding:0px; list-style: none;float:left;}
 #rank>ul>li span{float:left;}
+#rank>ul{
+	border-bottom:1px solid #e1e1e1;
+	padding:10px 0px 10px 10px;
+	margin:0px;
+}
+#rank li{
+	margin-bottom:4px;
+}
+#rank>div:first-child{
+	font-weight:bold;
+	font-family:나눔고딕;	
+}
+#rank>ul>li span:nth-child(1){
+	display:inline-block;
+	width:20px;
+	height:15px;
+	font-size:0.8em;
+	text-align:center;
+	font-family:나눔고딕;
+	font-weight:bold;
+	color:rgb(150, 150, 150);
+}
+#rank>ul>li span:nth-child(2){
+	font-family:나눔고딕;
+	font-size:0.8em;
+}
+#rank>ul:nth-of-type(1)>li span:nth-child(3){
+	margin:0 10px;
+	font-family:나눔고딕;
+	font-size:0.8em;
+	display:inline-block;
+}
+#rank>ul:nth-of-type(1)>li span:nth-child(4){
+	color:rgb(133, 133, 133);	
+	margin:0 0px 0 0px;
+	font-size:0.8em;
+	display:inline-block;
+}
+/*a tag 밑줄 추가*/
+#rank>ul a:hover{
+	text-decoration: underline;
+}
+/* 업데이트순 '시간전' 변경 */
+#rank>ul:nth-of-type(2)>li span:nth-child(3){
+	margin:0 5px 0 5px;
+	font-family:나눔고딕;
+	font-size:0.5em;
+	display:inline-block;
+	color:rgb(133, 133, 133);	
+	font-weight:bold;
+}
+/* wordCut 설정*/
 #rank>ul>li>#wordCut{
-	width:200px;
+	width:170px;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	text-align:left;
+} 
+#rank>ul>li>#wordCut2{
+	width:150px;
 	overflow:hidden;
 	white-space: nowrap;
 	text-overflow:ellipsis;
