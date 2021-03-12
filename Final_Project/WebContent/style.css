@@ -201,14 +201,15 @@ ul{
 	width:240px;
 	height:300px;
 	overflow:visible;
-	background-color:yellow;
 	float:right;
 }
+/*                          banner 가본 설정 width margin                                */
 #banner1,#banner2,#banner2>img,#banner3,#banner3>img
-,#rank{
+,#rank,#popularity,#notice{
 	margin-bottom:8px;
 	width:240px;
 }
+/*                          banner 기본 설정                        */
 	
 #banner1{
 	height:40px;
@@ -234,7 +235,7 @@ ul{
 #banner3>img{
 	height: 100px;
 }
-/*-------------------------------------------------banner rank------------------------*/
+/*==================================================rank=========================*/
 #rank{
 	width:240px;
 	border-top:1px solid #e1e1e1;
@@ -248,28 +249,31 @@ ul{
 	height:25px;
 	line-height:25px;
 }
-/* 인기순 업데이트순 글자*/
-#rank>a:nth-of-type(1)>div,#rank>a:nth-of-type(2)>div{
+/* 인기순 업데이트순 글자 ------------- 남자, 여자 글자 추가*/
+#rank>a:nth-of-type(1)>div,#rank>a:nth-of-type(2)>div
+,#popularity>a>div:nth-of-type(1),#popularity>a>div:nth-of-type(2){
 	text-align:center;
 	padding:5px 0px 0px 0px;
 	height:25px;
 	font-size:0.8em;
 }
-#rank>a:nth-of-type(1)>div{
+#rank>a:nth-of-type(1)>div
+,#popularity>a:nth-of-type(1)>div{
 	width:119px;
 	float:left;
 	border-top:1px solid #e1e1e1;
 	border-right:1px solid #e1e1e1;
 	color:rgb(133,133,133);
 }
-#rank>a:nth-of-type(2)>div{
+#rank>a:nth-of-type(2)>div
+,#popularity>a:nth-of-type(2)>div{
 	width:120px;
 	float:right;
 	border-top:1px solid #e1e1e1;
 	border-bottom:1px solid #e1e1e1;
 	color:rgb(133,133,133);
 }
-#rank>a>div>div{
+#rank>a>div>div,#popularity>a>div>div{
 	width:119px;
 	height:5px;
 	color:orange;
@@ -278,22 +282,38 @@ ul{
 }
 
 
-/* 랭크 1~10위 */
-#rank>ul,#rank li{width:230px;padding:0px; list-style: none;float:left;}
-#rank>ul>li span{float:left;}
-#rank>ul{
+/* 랭크 1~10위 ------------------ 이름, 나이순도 추가*/
+/*
+	populariy  > ul > li
+	1번 : 번호, <span>
+	2번 : 이미지, <a><span></a>
+	3번 : 글자, 글자 <div><span><br/><span></div>
+	4번 : - <span>
+	5번 : 0 <span>
+*/
+#rank>ul,#rank li,#popularity ul,#popularity li{
+	width:230px;
+	padding:0px; 
+	list-style: none;
+	float:left;
+}
+
+#rank>ul>li span,#popularity>ul>li span,#popularity div{
+	float:left;
+}
+#rank>ul,#popularity>ul{
 	border-bottom:1px solid #e1e1e1;
 	padding:10px 0px 10px 10px;
 	margin:0px;
 }
-#rank li{
+#rank li,#popularity li{
 	margin-bottom:4px;
 }
-#rank>div:first-child{
+#rank>div:first-child, #popularity>div:first-child{
 	font-weight:bold;
 	font-family:나눔고딕;	
 }
-#rank>ul>li span:nth-child(1){
+#rank>ul>li span:nth-child(1),#popularity>ul>li>span:nth-of-type(1){
 	display:inline-block;
 	width:20px;
 	height:15px;
@@ -307,13 +327,17 @@ ul{
 	font-family:나눔고딕;
 	font-size:0.8em;
 }
-#rank>ul:nth-of-type(1)>li span:nth-child(3){
+/*rank에 나이,성별순 인기순 - 설정도 추가*/
+#rank>ul:nth-of-type(1)>li span:nth-child(3)
+,#popularity>ul>li span:nth-child(4){
 	margin:0 10px;
 	font-family:나눔고딕;
 	font-size:0.8em;
 	display:inline-block;
 }
-#rank>ul:nth-of-type(1)>li span:nth-child(4){
+/*rank에 나이,성별순 인기순 0 설정도 추가*/
+#rank>ul:nth-of-type(1)>li span:nth-child(4)
+,#popularity>ul>li span:nth-child(5){
 	color:rgb(133, 133, 133);	
 	margin:0 0px 0 0px;
 	font-size:0.8em;
@@ -347,3 +371,80 @@ ul{
 	text-overflow:ellipsis;
 	text-align:left;
 } 
+/*================================성별, 나이순 배너==========================*/
+#popularity{
+	width:240px;
+	border-top:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+	border-left:1px solid #e1e1e1;
+	overflow:auto;
+}
+#popularity>ul img{
+	width:30px;
+	height:33px;
+}
+.ageTitle{
+	text-indent:0.4em;
+	font-size:0.8em;
+	height:25px;
+	line-height:25px;
+	font-family:나눔고딕;
+	font-weight:bold;
+}
+#popularity>div>input:nth-of-type(2),#popularity>div>input:nth-of-type(1){
+	color:rgb(0,213,100);
+	border:solid 1px #e1e1e1;
+	display:block;
+	width:19px;
+	height:17px;
+	line-height:15px;
+	float:right;
+	margin-top:4px;
+	background-color:white;
+}
+
+#popularity>div>span:nth-of-type(2){
+	margin-right:4px;
+}
+
+#popularity>div:first-child{
+	padding:3px;
+	width:230px;
+	
+	text-indent:0.4em;
+	height:25px;
+	line-height:25px;
+}
+/*---------------------- 남자, 여자 문자 설정 251줄 ~ 280줄에 추가--------------*/
+/*---------------------- 남자, 여자 나이별 랭킹 285줄 ~ 308줄에 추가------------------*/
+/* 참고
+	populariy  > ul > li
+	1번 : 번호, <span>
+	2번 : 이미지, <a><span></a>
+	3번 : 글자, 글자 <div><span><br/><span></div>
+	4번 : - <span>
+	5번 : 0 <span>
+*/
+#popularity>ul>li>div{
+	margin-left:10px;
+}
+.ageRankTitle{
+	width:110px;
+	height:10px;
+	font-family: 나눔고딕;
+    font-size: 0.8em;
+} 
+.ageRankName{
+	width:110px;
+	height:10px;
+	font-family: 나눔고딕;
+    font-size: 0.7em;
+} 
+#popularity>ul>li>div>span:nth-of-type(2)>a:link
+,#popularity>ul>li>div>span:nth-of-type(2)>a:hover
+,#popularity>ul>li>div>span:nth-of-type(2)>a:visited
+,#popularity>ul>li>div>span:nth-of-type(2)>a:active{
+	color:rgb(150, 150, 150);
+}
+
+/*================================공지사항 배너==========================*/
