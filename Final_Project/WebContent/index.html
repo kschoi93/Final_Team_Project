@@ -3,8 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-git 사용법을 알아보자~
+<div id="header">
+	<span><a href="#" onclick="return false;">NAVER</a></span>
+	<span><a href="#" onclick="return false;">만화 </a></span>
+	<span>|</span>
+	<span><a href="#" onclick="return false;">웹소설</a></span>
+	<span>
+		<input id ="searchTxt" type="text" size="32em" placeholder="제목/작가로 검색할 수 있습니다." />
+		<a href="#" onclick="return false;"><img src="img/search_icon.png" id="searchIcon"/></a>
+	</span>
+	
+	<a href="#" onclick="return false;"><img src="img/service_icon.png" id="service_icon"/></a>
+	<input id="login" type="button" value="로그인"/>
+</div>
+<hr>
+<div id="title">
+	<ul id="titleMenu">
+	
+	</ul>
+</div>
+<hr>
+<div id="genreDiv">
+	<ul id="genre">
+		
+	</ul>
+</div>
+<hr>
+<div id="section">
+	<div id="sectionLeft">
+		<hr/>
+		<a href="#header"><button id="moveTop">
+			<span>TOP</span><span>▲</span>		
+		</button></a>
+	</div>
+	<div id="sectionRight">
+		<a href="#" onclick="return false;"><div id="banner1">웹툰 올리기</div></a>
+		<a href="#" onclick="return false;"><div id="banner2"><img src="img/ad.jpg"/></div></a>
+		<a href="#" onclick="return false;"><div id="banner3"><img src="img/ad2.jfif"/></div></a>
+		<div id="rank">
+			<div>인기급상승 만화</div>
+			<a href="#" onclick="return false;"><div>인기순<div>▼</div></div></a>
+			<a href="#" onclick="return false;"><div>업데이트순	<div>▼</div></div></a>
+			<ul>
+			
+			</ul>
+			<ul>
+			
+			</ul>
+		</div>
+		<div id="popularity">
+			<div>
+				<span class="ageTitle">20대 실시간 인기만화</span>
+				<input type="button" value="&gt"/><input type="button" value="&lt"/>
+				
+			</div>
+			<a href="#" onclick="return false;"><div>남자<div>▼</div></div></a>
+			<a href="#" onclick="return false;"><div>여자	<div>▼</div></div></a>
+			<ul>
+			</ul>
+			<ul>
+			</ul>
+		</div>
+		<div id="notice">
+			   <div id="noticeTitle">
+			   		<span>공지사항</span>
+			   		<span><a href="#" onclick="return false;">더보기</a></span>
+			   		<span>▶</span>
+			   </div>
+			   <div id="noticeNewInfo">
+			   		<ul>
+				   		<li><span>■</span><a href="#" onclick="return false;">네이버웹툰 미리보기/완결보기 컨텐츠별 이용가 관련 안내</a></li>
+				   		<li><span>■</span><a href="#" onclick="return false;">2021년 2월 베스트 도전만화 승격작 발표</a></li>
+				   		<li><span>■</span><a href="#" onclick="return false;">2021년 3월 유료화 전환 작품 안내</a></li>
+				   		<li><span>■</span><a href="#" onclick="return false;">신작 쿠키 이벤트 당첨자 안내</a></li>
+			   		</ul>
+			   </div>
+		</div>
+		<div id="banner4">
+			<a href="#" onclick="return false"><img src="img/bnr_partnership.jpg"/></a>
+		</div>
+		<div id="banner5">
+			<a href="#" onclick="return false"><img src="img/bnr_joinus.jpg"/></a>
+		</div>
+		<div id="banner6">
+			<a href="#" onclick="return false"><img src="img/bnr_careers.jpg"/></a>
+		</div>
+		<a href="#" onclick="return false">
+			<div id="banner7">만화 FAQ</div>
+		</a>
+	</div>
+</div>
+<footer>
+	<div id="wrap">
+		<div id="bottomLeft">
+			<div>
+				<a href="#" onclick="return false">이용약관</a><span class="bar">|</span>
+				<a href="#" onclick="return false">개인정보처리방침</a><span class="bar">|</span>
+				<a href="#" onclick="return false">책임의 한계와 법적고지</a><span class="bar">|</span>
+				<a href="#" onclick="return false">고객센터</a><span class="bar">|</span>
+				<a href="#" onclick="return false">웹툰 광고 문의</a>
+			</div>
+			<div>
+				<a href="#" onclick="return false">© NAVER CORP.</a>
+			</div>
+		</div>
+		<span></span>
+		<div id="bottomRight">
+			<div>
+				<a href="#" onclick="return false">이용약관</a><span class="bar">|</span>
+				<a href="#" onclick="return false">개인정보처리방침</a><span class="bar">|</span>
+				<a href="#" onclick="return false">청소년보호정책</a><span class="bar">|</span>
+				<a href="#" onclick="return false">웹툰 고객센터</a><span class="bar">|</span>
+				<a href="#" onclick="return false">웹툰 사업 문의</a>
+			</div>
+			<div>
+				<a href="#" onclick="return false">© NAVER WEBTOON Limited.</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<br/>
+	<p>본 콘텐츠의 저작권은 저자 또는 제공처에 있으며, 이를 무단으로 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</p>
+</footer>
 </body>
 </html>

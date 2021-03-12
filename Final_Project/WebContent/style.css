@@ -1,0 +1,637 @@
+@charset "UTF-8";
+/*					링크 설정 				*/
+a:link{text-decoration: none; color:black;}
+a:visited{text-decoration:none; color:black;}
+a:hover{text-decoration:none;color:black;}
+a:active{text-decoration:none;color:black;}
+
+body{
+	margin:0px;
+}
+hr:nth-of-type(1){
+	border:0px;
+	height:1px;
+	background-color:#e4e4e4;
+	margin:0px;
+}
+hr:nth-of-type(2){
+	border:0px;
+	margin:0px 0px 0px 0px;
+	height:1px;
+	background-color:#e4e4e4;
+}
+hr:nth-of-type(3){
+	border:0px;
+	margin:0px 0px 8px 0px;
+	height:1px;
+	background-color:#e4e4e4;
+}
+
+/*===========================================================header===================================================================*/
+/*					상부					*/
+#header{
+	width:1000px;
+	margin:10px auto;
+	height:40px;
+	line-height:30px;
+}
+#header>span:first-child {
+	font-size: 12pt;
+	font-family: Cooper;
+	font-weight: bold;
+}
+#header>span:nth-of-type(2) {
+	font-size: 18pt;
+	font-family:나눔고딕;
+}
+#header>span:nth-of-type(3),#header>span:nth-of-type(4)>a{
+	color:#aaa;
+	font-size:11pt;
+	font-family:나눔고딕;
+}
+#header>span:nth-of-type(4)>a{
+	margin-right:20px;
+}
+
+/*-----------------------------------------------------------	검색창------------------*/
+#header>span:nth-of-type(5){
+	display:inline-block;
+	height:25px;
+	width:270px;
+	line-height:25px;
+	padding:5px 6px 5px 10px;
+	border : solid 1px #ddd;
+}
+#searchIcon{
+	width:30px;
+	height:30px;
+	float:right;
+	opacity: 0.3;
+}
+#searchTxt{
+	font-size:0.8em;
+	text-indent:0.2em;
+	border:white;
+}
+#searchTxt:focus{
+	border:solid 1px #aaa;
+	border-radius:7px;
+}
+#header>span:nth-of-type(5)>input::placeholder{
+	font-size:9pt;
+}
+
+
+/*--------------------------------------------------------로그인 및 버튼---------------*/
+#service_icon,#login{
+	float:right;
+	margin:0 5px;	
+}
+#login{
+	margin-top:5px;
+	border:1px solid #ddd;
+	color: rgb(102,102,102);
+	font-size:9pt;
+	padding:3px 8px;
+	text-align:center;
+	background-color:white;
+}
+#service_icon{
+	margin-top:9px;
+	width:17px;
+	height:17px;
+	opacity: 0.3;
+	
+}
+
+
+
+/*======================================title======================================================================================*/
+#title{
+	width:1000px;
+	height:40px;
+	line-height:40px;
+	margin:0 auto;
+}
+ul{
+	margin:0px;
+	padding:0px;
+}
+#titleMenu>li{
+	height:34px;
+	float:left;
+	padding:3px 12px;
+	font-family:나눔고딕;
+	font-size:0.9em;
+	font-weight: bold;
+	letter-spacing:-1px;
+	word-spacing: -1px;
+	list-style: none;
+}
+
+#titleMenu>li:nth-of-type(2){
+	background-color:rgb(0,213,100);
+}
+#titleMenu>li:nth-of-type(2)>a{color:white;}
+#titleMenu>li:nth-child(n+6), 
+#titleMenu>li:nth-child(n+6)>a:visited,
+#titleMenu>li:nth-child(n+6)>a:link,
+#titleMenu>li:nth-child(n+6)>a:active,
+#titleMenu>li:nth-child(n+6)>a:hover,
+#genre>li>a:visited,
+#genre>li>a:link,
+#genre>li>a:active,
+#genre>li>a:hover{
+	color:rgb(133, 133, 133);
+}
+
+#genre>li:first-child>a:visited,
+#genre>li:first-child>a:link,
+#genre>li:first-child>a:active,
+#genre>li:first-child>a:hover{
+	color:black;
+}
+
+#titleMenu>div{
+	float:right;
+	font-size:0.8em;
+}
+#titleMenu>div>a:hover{
+	color:#aaa;
+	text-decoration: underline;
+}
+#titleMenu>div>a:active
+,#titleMenu>div>a:visited
+,#titleMenu>div>a:link{
+	color:#575757;
+}
+
+/*=============================================genre================================================================================*/
+#genreDiv{
+	width:100%;
+	height:30px;
+	background:rgb(250, 250, 250);
+	padding:4px 0px;
+}
+#genre{
+	width:1000px;
+	height:30px;
+	margin:0px auto;
+	background:rgb(250, 250, 250);
+}
+#genre>li{
+	height:30px;
+	line-height:30px;
+	float:left;
+	list-style:none;
+	margin:0px 16px 0px 4px;
+	font-size:0.7em;
+	font-weight:bold;
+	color:rgb(133, 133, 133);
+	font-family:나눔고딕;
+}
+
+
+
+/*=============================================section===============================================================================*/
+#section{
+	width:1004px;
+	margin:0 auto;
+	height:auto;
+	overflow:hidden;
+}
+/*-----------------------------------------------section>sectionleft--------------*/
+#sectionLeft{
+	width:750px;
+	height:auto;
+	overflow:hidden;
+	margin-right:10px;
+	float:left;
+}
+#moveTop{
+	float:right;
+	margin:20px 0px 200px 0px;
+}
+#moveTop>span:last-child{
+	color:rgb(0,213,100);
+	margin:0px -2px;
+}
+#moveTop>span:first-child,#moveTop>span:last-child {
+	float:right;
+	font-size:0.1em;
+	transform:scale(0.8);
+	font-weight:bold;
+}
+
+/*-----------------------------------------------section>sectionRight--------------*/
+#sectionRight{
+	width:242px;
+	height:auto;
+	float:right;
+}
+/*----------------------------banner 가본 설정 width margin-----------------------------------*/
+#banner1,#banner2,#banner2>img,#banner3,#banner3>img
+,#rank,#popularity,#notice,#banner4,#banner5,#banner6,#banner7{
+	margin-bottom:8px;
+	width:240px;
+}
+/*----------------------------banner 가본 설정 width margin-----------------------------------*/
+	
+#banner1{
+	height:40px;
+	line-height:40px;
+	background-color:rgb(0,213,100);
+	text-align:center;
+	color:white;
+	font-family:나눔고딕;
+	font-weight:bold;
+	font-size:0.9em;
+	letter-spacing: -1px;
+}
+#banner2{
+	height:240px;
+	border:solid 1px #ddd;
+}
+#banner2>img{
+	height:240px;
+}
+#banner3{
+	height: 100px;
+}
+#banner3>img{
+	height: 100px;
+}
+/*==================================================rank=========================*/
+#rank{
+	width:240px;
+	border-top:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+	border-left:1px solid #e1e1e1;
+	overflow:auto;
+}
+#rank>div:first-child{
+	text-indent:0.4em;
+	font-size:0.8em;
+	height:25px;
+	line-height:25px;
+}
+/* 인기순 업데이트순 글자 ------------- 남자, 여자 글자 추가*/
+#rank>a:nth-of-type(1)>div,#rank>a:nth-of-type(2)>div
+,#popularity>a>div:nth-of-type(1),#popularity>a>div:nth-of-type(2){
+	text-align:center;
+	padding:5px 0px 0px 0px;
+	height:25px;
+	font-size:0.8em;
+}
+#rank>a:nth-of-type(1)>div
+,#popularity>a:nth-of-type(1)>div{
+	width:119px;
+	float:left;
+	border-top:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+	color:rgb(133,133,133);
+}
+#rank>a:nth-of-type(2)>div
+,#popularity>a:nth-of-type(2)>div{
+	width:120px;
+	float:right;
+	border-top:1px solid #e1e1e1;
+	border-bottom:1px solid #e1e1e1;
+	color:rgb(133,133,133);
+}
+#rank>a>div>div,#popularity>a>div>div{
+	width:119px;
+	height:5px;
+	color:orange;
+	font-size:0.1px;
+	transform:scale(0.7);
+}
+
+
+/* 인기순, 업데이트순 랭크 1~10위 ------------------ 이름, 나이순도 추가*/
+/*
+	populariy  > ul > li
+	1번 : 번호, <span>
+	2번 : 이미지, <a><span></a>
+	3번 : 글자, 글자 <div><span><br/><span></div>
+	4번 : - <span>
+	5번 : 0 <span>
+*/
+#rank>ul,#rank li,#popularity ul,#popularity li{
+	width:230px;
+	padding:0px; 
+	list-style: none;
+	float:left;
+}
+
+#rank>ul>li span,#popularity>ul>li span,#popularity div{
+	float:left;
+}
+#rank>ul,#popularity>ul{
+	border-bottom:1px solid #e1e1e1;
+	padding:10px 0px 10px 10px;
+	margin:0px;
+}
+#rank li,#popularity li{
+	margin-bottom:4px;
+}
+#rank>div:first-child, #popularity>div:first-child{
+	font-weight:bold;
+	font-family:나눔고딕;	
+}
+#rank>ul>li span:nth-child(1),#popularity>ul>li>span:nth-of-type(1){
+	display:inline-block;
+	width:20px;
+	height:15px;
+	font-size:0.8em;
+	text-align:center;
+	font-family:나눔고딕;
+	font-weight:bold;
+	color:rgb(150, 150, 150);
+}
+#rank>ul>li span:nth-child(2){
+	font-family:나눔고딕;
+	font-size:0.8em;
+}
+/*rank에 나이,성별순 인기순 - 설정도 추가*/
+#rank>ul:nth-of-type(1)>li span:nth-child(3)
+,#popularity>ul>li span:nth-child(4){
+	margin:0 10px;
+	font-family:나눔고딕;
+	font-size:0.8em;
+	display:inline-block;
+}
+/*rank에 나이,성별순 인기순 0 설정도 추가*/
+#rank>ul:nth-of-type(1)>li span:nth-child(4)
+,#popularity>ul>li span:nth-child(5){
+	color:rgb(133, 133, 133);	
+	margin:0 0px 0 0px;
+	font-size:0.8em;
+	display:inline-block;
+}
+/*a tag 밑줄 추가*/
+#rank>ul a:hover{
+	text-decoration: underline;
+}
+/* 업데이트순 '시간전' 변경 */
+#rank>ul:nth-of-type(2)>li span:nth-child(3){
+	margin:0 5px 0 5px;
+	font-family:나눔고딕;
+	font-size:0.5em;
+	display:inline-block;
+	color:rgb(133, 133, 133);	
+	font-weight:bold;
+}
+/* wordCut 설정*/
+#rank>ul>li>#wordCut{
+	width:170px;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	text-align:left;
+} 
+#rank>ul>li>#wordCut2{
+	width:150px;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	text-align:left;
+} 
+/*================================성별, 나이순 배너==========================*/
+#popularity{
+	width:240px;
+	border-top:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+	border-left:1px solid #e1e1e1;
+	overflow:auto;
+}
+#popularity>ul img{
+	width:30px;
+	height:33px;
+}
+.ageTitle{
+	text-indent:0.4em;
+	font-size:0.8em;
+	height:25px;
+	line-height:25px;
+	font-family:나눔고딕;
+	font-weight:bold;
+}
+#popularity>div>input:nth-of-type(2),#popularity>div>input:nth-of-type(1){
+	color:rgb(0,213,100);
+	border:solid 1px #e1e1e1;
+	display:block;
+	width:19px;
+	height:17px;
+	line-height:15px;
+	float:right;
+	margin-top:4px;
+	background-color:white;
+}
+
+#popularity>div>span:nth-of-type(2){
+	margin-right:4px;
+}
+
+#popularity>div:first-child{
+	padding:3px;
+	width:230px;
+	
+	text-indent:0.4em;
+	height:25px;
+	line-height:25px;
+}
+/*---------------------- 남자, 여자 문자 설정 251줄 ~ 280줄에 추가--------------*/
+/*---------------------- 남자, 여자 나이별 랭킹 285줄 ~ 308줄에 추가------------------*/
+/* 참고
+	populariy  > ul > li
+	1번 : 번호, <span>
+	2번 : 이미지, <a><span></a>
+	3번 : 글자, 글자 <div><span><br/><span></div>
+	4번 : - <span>
+	5번 : 0 <span>
+*/
+#popularity>ul>li>div{
+	margin-left:10px;
+}
+.ageRankTitle{
+	width:110px;
+	height:10px;
+	font-family: 나눔고딕;
+    font-size: 0.8em;
+} 
+.ageRankName{
+	width:110px;
+	height:10px;
+	font-family: 나눔고딕;
+    font-size: 0.7em;
+} 
+#popularity>ul>li>div>span:nth-of-type(2)>a:link
+,#popularity>ul>li>div>span:nth-of-type(2)>a:hover
+,#popularity>ul>li>div>span:nth-of-type(2)>a:visited
+,#popularity>ul>li>div>span:nth-of-type(2)>a:active{
+	color:rgb(150, 150, 150);
+}
+
+/*================================공지사항 배너==========================*/
+/*공지사항 배너 설정*/
+#notice{
+	border:1px solid #e1e1e1;
+	width:240px;
+	height:auto;
+	overflow:visible;
+}
+/*공지사항 div 설정*/
+#noticeTitle{
+	border-bottom:1px solid #e1e1e1;
+	width:228px;
+	height:25px;
+	padding:4px 6px;
+}
+/*타이틀 공지사항 문자*/
+#noticeTitle>span:nth-of-type(1){
+	height:25px;
+	line-height:25px;
+	font-size:0.8em;
+	font-weight:bold;
+	font-family: 나눔고딕;
+	float:left;
+}
+/*화살표와 더보기 글자 우정렬*/
+#noticeTitle>span:nth-of-type(2),#noticeTitle>span:nth-of-type(3){
+	float:right;
+}
+/*더보기 옆 화살표 설정*/
+#noticeTitle>span:nth-of-type(3){
+	height:25px;
+	line-height:25px;
+	font-size: 1px;
+	transform: scale(0.7);
+	color:orange;
+}
+
+#noticeTitle>span:nth-of-type(2)>a:visited
+,#noticeTitle>span:nth-of-type(2)>a:link
+,#noticeTitle>span:nth-of-type(2)>a:active{
+	font-size:	0.7em;
+	height:25px;
+	line-height:25px;
+	text-decoration:none;
+}
+#noticeTitle>span:nth-of-type(2)>a:hover{
+	text-decoration:underline;
+}
+/*공지사항 최신글 목록*/
+#noticeNewInfo{
+	width:220px;
+	margin:0px; padding:0px;
+	overflow:visible;
+}
+#noticeNewInfo ul{
+	margin-top:8px;
+	margin-bottom:8px;
+}
+#noticeNewInfo li{
+	width:220px;
+	font-size:0.7em;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+#noticeNewInfo span{
+	display:block;
+	font-size:1px;
+	transform: scale(0.3);
+	color:#aaa;
+	margin:0px 4px;
+	float:left;
+}
+#noticeNewInfo>ul>li:first-child{
+	font-size:0.8em;
+	font-weight:bold;
+}
+
+
+
+#noticeNewInfo a:visited
+,#noticeNewInfo a:link
+,#noticeNewInfo a:active{
+	text-decoration:none;
+}
+
+#noticeNewInfo a:hover{
+	text-decoration:underline;
+}
+/* 							마지막 배너							*/
+#banner7{
+	border:solid 1px #e1e1e1;
+	font-size:1.5em;
+	text-align:center;
+	font-family:나눔고딕;
+	color:rgb(133,133,133);
+}
+/*============================마지막단 footer========================================*/
+footer{
+	width:1000px;
+	margin: 0 auto;
+	border-top:#e1e1e1 1px solid;
+}
+#wrap{
+	width:1000px;
+	height:auto;
+}
+#bottomLeft{
+	width:48%;
+	font-size:0.7em;
+	font-family:나눔고딕;
+	float:left;
+	margin:50px 0px;
+}
+#bottomRight{
+	width:48%;
+	font-size:0.7em;
+	font-family:나눔고딕;	
+	float:right;
+	margin:50px 0px;
+}
+#wrap>span{
+	display:inline-block;
+	margin:50px 0px 30px 0px;
+	width:1px;
+	height:50px;
+	background:#e1e1e1;
+	border:0px;
+}
+#bottomLeft>div>a:last-child,#bottomRight>div>a:last-child{
+	font-weight:bold;
+	color:rgb(133,133,133);
+}
+#bottomLeft>div:last-child,#bottomRight>div:last-child{
+	margin-top:20px;
+}
+footer p{
+	font-size:0.8em;
+	color:#aaa;
+}
+.bar{
+	color:#e1e1e1;
+	margin:00px 2px 00px 7px;
+}
+#bottomLeft a:nth-of-type(2),#bottomRight a:nth-of-type(2){
+	font-weight:bold;
+}
+
+#bottomLeft>div:first-child a:visited
+,#bottomLeft>div:first-child a:link
+,#bottomLeft>div:first-child a:active
+,#bottomRight>div:first-child a:visited
+,#bottomRight>div:first-child a:link
+,#bottomRight>div:first-child a:active{
+	text-decoration:none;
+}
+
+#bottomLeft>div:first-child a:hover
+,#bottomRight>div:first-child a:hover{
+	text-decoration:underline;
+}
