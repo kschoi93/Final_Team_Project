@@ -4,7 +4,6 @@
 
 > 비트캠프 자바 교육과정 마지막 팀 프로젝트를 위해 생성한 Git Repository
 
-
 > 팀원 구성 Kim Seo-Yoon , Jang Su-Yeon , Choi Kyung-Sik , Kim Yun-Su , Lee Kang-San , Cha Yoon-Joo
 
 > Final Team Project Repository의 사용 용도
