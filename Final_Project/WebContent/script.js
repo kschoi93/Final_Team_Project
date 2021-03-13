@@ -157,4 +157,31 @@
 			}
 		});
 		
+		// sectionLeft  요일 버튼 
+		$("#webtoonMenu>span").click(function(){
+			$('#webtoonMenu>span>a').css('color','black');
+			$('#webtoonMenu>span').css('border-bottom','0').css('font-weight','inherit');
+			$(this).css('border-bottom','3px solid rgb(0,213,100)').css('font-weight','bold');
+			
+			var dayIdCheck = $(this).attr('id');
+			switch(dayIdCheck){
+				case "allday" : $('#webtoonMenu>span:nth-of-type(1)>a').css('color','rgb(0,213,100)');
+					break;
+				case "monday" : $('#webtoonMenu>span:nth-of-type(2)>a').css('color','rgb(0,213,100)');
+					break;
+				case "tuesday" : $('#webtoonMenu>span:nth-of-type(3)>a').css('color','rgb(0,213,100)');
+					break;
+				case "wednesday" : $('#webtoonMenu>span:nth-of-type(4)>a').css('color','rgb(0,213,100)');
+					break;
+				case "thursday" : $('#webtoonMenu>span:nth-of-type(5)>a').css('color','rgb(0,213,100)');
+					break;
+				case "friday" : $('#webtoonMenu>span:nth-of-type(6)>a').css('color','rgb(0,213,100)');
+					break;
+				case "saturday" : $('#webtoonMenu>span:nth-of-type(7)>a').css('color','rgb(0,213,100)');
+					break;
+				case "sunday" : $('#webtoonMenu>span:nth-of-type(8)>a').css('color','rgb(0,213,100)');
+					break;
+			}
+			console.log($(this).attr('id'));
+		});
 	});
