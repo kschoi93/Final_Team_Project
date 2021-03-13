@@ -26,6 +26,23 @@ hr:nth-of-type(3){
 	height:1px;
 	background-color:#e4e4e4;
 }
+/* section 내부 요일 메뉴 아래 hr*/
+#sectionLeft>hr:nth-of-type(1){
+	margin:0px 0px 8px 0px;
+	position:relative;
+	top:-6px;
+	z-index:100;
+	height:2px;
+	background-color:#e4e4e4;
+}
+
+/* section 내부 top 위에 hr*/
+#sectionLeft>hr:nth-of-type(2){
+	border:0px;
+	margin:40px 0px 0px 0px;
+	height:1px;
+	background-color:#e4e4e4;
+}
 
 /*===========================================================header===================================================================*/
 /*					상부					*/
@@ -208,6 +225,50 @@ ul{
 	margin-right:10px;
 	float:left;
 }
+#webtoonMenu{
+	width:750px;
+	height:auto;
+	overflow:hidden;
+	padding:5px 0px;
+}
+#webtoonMenu>span:first-child{
+	width: 60px;
+	height: 26px;
+	display:block;
+	float:left;
+	font-size:0.9em;
+	text-align:center;
+	padding:8px 0px 0px 0px;
+	margin:0px 8px 0px 0px;
+	position:relative;
+	z-index:200;
+	font-family:나눔고딕;
+}
+.spanDay{
+	width: 60px;
+	height: 26px;
+	display:block;
+	float:left;
+	font-size:0.9em;
+	text-align:center;
+	padding:8px 0px 0px 0px;
+	margin:0px 8px 0px 8px;
+	position:relative;
+	z-index:200;
+	font-family:나눔고딕;
+}
+#webtoonMenu>span:nth-of-type(2){
+	border-bottom:3px solid rgb(0,213,100);
+	font-weight:bold;
+}
+
+#webtoonMenu>span:nth-of-type(2)>a{
+	color:rgb(0,213,100);
+
+}
+
+
+/*최하단 top버튼*/
 #moveTop{
 	float:right;
 	margin:20px 0px 200px 0px;
@@ -223,19 +284,24 @@ ul{
 	font-weight:bold;
 }
 
+
+
+
+
+
 /*-----------------------------------------------section>sectionRight--------------*/
 #sectionRight{
 	width:242px;
 	height:auto;
 	float:right;
 }
-/*----------------------------banner 가본 설정 width margin-----------------------------------*/
+/*banner 가본 설정 width margin*/
 #banner1,#banner2,#banner2>img,#banner3,#banner3>img
 ,#rank,#popularity,#notice,#banner4,#banner5,#banner6,#banner7{
 	margin-bottom:8px;
 	width:240px;
 }
-/*----------------------------banner 가본 설정 width margin-----------------------------------*/
+/*banner 가본 설정 width margin*/
 	
 #banner1{
 	height:40px;
