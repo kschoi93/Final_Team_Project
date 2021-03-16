@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>웹툰 목요일</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #thursDayGood>ul>li {
+            float: left;
+            padding-right: 20px;
+        }
+
+        #thursDayGood {
+            overflow: auto;
+            width:800px;
+        }
+
+        #thursDayMain>ul>li {
+            float: left;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #thursDayMain>ul>li>a>span {
+            text-align: right;
+        }
+
+        #jump>li {
+            margin-left: 10px;
+
+        }
+
+        #some {
+            margin-left: 10px;
+        }
+
+        #popularity {
+            padding-left: 280px;
+        }
+
+        #thursDayMain {
+            padding-top: 30px;
+            width: 800px;
+        }
+
+        hr {
+            overflow: auto;
+            width: 700px;
+        }
+
+        #contents>li>div {
+            float: left;
+        }
+
+        #contents {
+            padding-top: 30px;
+            overflow: auto;
+            width: 800px;
+        }
+
+        #contents>li {
+            float: left;
+            margin-bottom: 20px;
+        }
+
+        #webname {
+            overflow: auto;
+        }
+
+        #contents>li:not(:nth-child(3n+1)) {
+            margin-left: 50px;
+        }
+        #toDay{
+        font-size: 15px;
+        }
+        #thurs{
+            padding-bottom: 10px;
+        }
+    </Style>
+    <script>
+        var dateTime = new Date();
+        var timeTxt = dateTime.getFullYear()+".";
+            timeTxt += (dateTime.getMonth()+1)+ ".";
+            timeTxt += dateTime.getDate();
+        
+        $(function(){
+            $("#webdate").append(timeTxt);
+        });
+    </script>
+    </head>
+    <body>
+        <!-- 목요추천웹툰 상단바 -->
+        <div id="thursDayGood">
+            <h1 id="thurs">목요 추천웹툰 <span id="toDay">TODAY: <a id="webdate"></a></span></h1>
+        <ul>
+            <li>
+                <div>
+                    <a herf="#"><img src="img/m2.png" /></a>
+                </div>
+                <dt>
+                    <a href="#">
+                        <strong title="카루나">카루나</strong>
+                    </a>
+                </dt>
+                <dt>
+                    <a href="#" title="22. 성격 까칠한 새 친구">22. 성격 까칠한 새 친구</a>
+                </dt>
+                <dt>
+                    <a href="#" title="강호진">강호진</a>
+                </dt>
+                <dt style="color : red">
+                    ★★★★★ <span style="color: black;">9.88</span>
+                </dt>
+            </li>
+            <li>
+                <div>
+                    <a herf="#"><img src="img/m3.png" /></a>
+                </div>
+                <dt>
+                    <a href="#">
+                        <strong title="당신의 과녁">당신의 과녁</strong>
+                    </a>
+                </dt>
+                <dt>
+                    <a href="#" title="62화">62화</a>
+                </dt>
+                <dt>
+                    <a href=# title="고태호">고태호</a>
+                </dt>
+                <dt style="color : red">
+                    ★★★★★ <span style="color : black">9.98</span>
+                </dt>
+            </li>
+            <li>
+                <div>
+                    <a herf="#"><img src="img/m1.png" /></a>
+                </div>
+                <dt>
+                    <a href="#">
+                        <strong title="당신의 과녕">그 황제가 시곗바늘을 되돌린 ...</strong>
+                    </a>
+                </dt>
+                <dt>
+                    <a href="#" title="5화">5화</a>
+                </dt>
+                <dt>
+                    <a href="#" title="화영/용끄">화영/용끄</a>
+                </dt>
+                <dt style="color : red">
+                    ★★★★★ <span style="color : black">9.92</span>
+                </dt>
+            </li>
+        </ul>
+    </div>
+    <div id="thursDayMain">
+        <!-- 클릭시 이벤트생성해야함 -->
+        <ul>
+            <li>목요 전체 웹툰</li>
+        </ul>
+        <!-- 썸네일형 리스트형 자바스크립트 써야함-->
+        <ul id="jump">
+            <li><a href="#"><span id="popularity">인기순</span></a></li>
+            <li><a href="#"><span>업데이트순</span></a></li>
+            <li><a href="#"><span>조회순</span></a></li>
+            <li><a href="#"><span>별점순</span></a></li>
+        </ul>
+        <ul>
+            <li id="some"><a href="Thursday.html"><img src="img/3.PNG" width="19" height="19" title="썸네일형"></a></li>
+            <li><a href="#"><img src="img/4.PNG" width="19" height="19" title="리스트형"></a></li>
+        </ul>
+    </div>
+    <br><br>
+    <hr />
+    <div id="contents">
+        <table cellpadding="0" cellspacing="0" class="table_list">
+            <colgroup>
+                <col>
+                <col width="160">
+                <col width="230">
+                <col width="130">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" class="th_title"><span>제목</span></th>
+                    <th scope="col" class="th_rating"><span>별점</span></th>
+                    <th scope="col" class="th_author"><span>글/그림</span></th>
+                    <th scope="col" class="th_udate"><span>업데이트 일시</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="fist">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=748105&amp;weekday=thu"><strong title="독립일기">독립일기</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.75%">★★★★★</em></span>
+                            <strong>9.97</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('748105', this)">자까</a>
+                    </td>
+                    <td class="date">
+                        2021.03.13 23:25
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=736989&amp;weekday=thu"><strong title="더 복서">더
+                                복서</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.37%">★★★★★</em></span>
+                            <strong>9.94</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('736989', this)">
+                            정지훈</a>
+                    </td>
+                    <td class="date">2021.03.10 23:01</td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=570503&amp;weekday=thu"><strong
+                                title="연애혁명">연애혁명</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.69%">★★★★★</em></span>
+                            <strong>9.87</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('570503', this)">
+                            232</a>
+                    </td>
+                    <td class="date">2021.03.10 23:23</td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=557672&amp;weekday=thu"><strong
+                                title="기기괴괴">기기괴괴</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.02%">★★★★★</em></span>
+                            <strong>9.90</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('557672', this)">
+                            오성대</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:15
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=731130&amp;weekday=thu"><strong
+                                title="이두나!">이두나!</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.60%">★★★★★</em></span>
+                            <strong>9.96</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('731130', this)">
+                            민송아</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:21
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=739503&amp;weekday=thu"><strong title="화이트 블러드">화이트
+                                블러드</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.71%">★★★★★</em></span>
+                            <strong>9.97</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('739503', this)">
+                            임리나</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:20
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=747271&amp;weekday=thu"><strong
+                                title="나노마신">나노마신</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.57%">★★★★★</em></span>
+                            <strong>9.96</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('747271', this)">
+                            현절무 / 금강불괴</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:09
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=756137&amp;weekday=thu"><strong
+                                title="노답소녀">노답소녀</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:97.92%">★★★★★</em></span>
+                            <strong>9.79</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('756137', this)">
+                            석우</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:02
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=762279&amp;weekday=thu"><strong
+                                title="정글쥬스">정글쥬스</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.21%">★★★★★</em></span>
+                            <strong>9.92</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('762279', this)">
+                            형은 / 쥬더</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:05
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=710761&amp;weekday=thu"><strong
+                                title="하드캐리">하드캐리</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.12%">★★★★★</em></span>
+                            <strong>9.91</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('710761', this)">
+                            조양</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:21
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=766982&amp;weekday=thu"><strong
+                                title="희망강림">희망강림</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:71.96%">★★★★★</em></span>
+                            <strong>7.20</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('766982', this)">
+                            야옹이</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:25
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=637931&amp;weekday=thu"><strong
+                                title="전자오락수호대">전자오락수호대</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.73%">★★★★★</em></span>
+                            <strong>9.97</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('637931', this)">
+                            가스파드</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:22
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=746857&amp;weekday=thu"><strong
+                                title="무사만리행">무사만리행</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.28%">★★★★★</em></span>
+                            <strong>9.93</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('746857', this)">
+                            운 / 배민기</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:07
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=766503&amp;weekday=thu"><strong
+                                title="마계인섬">마계인섬</strong></a><img
+                            src="https://ssl.pstatic.net/static/comic/images/migration/webtoon/ico_new3.gif" width="11"
+                            height="11" alt="NEW" class="new">
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:93.11%">★★★★★</em></span>
+                            <strong>9.31</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('766503', this)">
+                            초</a>
+                    </td>
+                    <td class="date">  2021.03.10 23:12
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=741825&amp;weekday=thu"><strong title="꽃만 키우는데 너무강함">꽃만 키우는데
+                                너무강함</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.69%">★★★★★</em></span>
+                            <strong>9.97</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('741825', this)">
+                            쿰타타 / 주현후</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:03
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=738194&amp;weekday=thu"><strong title="당신의 과녁">당신의
+                                과녁</strong></a>
+                    </td>
+                    <td>
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.62%">★★★★★</em></span>
+                            <strong>9.96</strong>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return artistAction.viewArtist('738194', this)">
+                            고태호</a>
+                    </td>
+                    <td class="date">
+                        2021.03.10 23:16
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=701700&amp;weekday=thu"><strong
+                                title="트롤트랩">트롤트랩</strong></a>
+                    </td>
+                    <td>
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.52%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('701700', this)">
+                            유비</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:13
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=716857&amp;weekday=thu"><strong title="오늘의 순정망화">오늘의
+                                순정망화</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.85%">★★★★★</em></span>
+                            <strong>9.98</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('716857', this)">
+                            손하기</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:24
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=758673&amp;weekday=thu"><strong title="어차피 남편은!">어차피
+                                남편은!</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:97.68%">★★★★★</em></span>
+                            <strong>9.77</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('758673', this)">
+                            찡나</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:12
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=131385&amp;weekday=thu"><strong title="쿠베라">쿠베라</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.63%">★★★★★</em></span>
+                            <strong>9.96</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('131385', this)">
+                            카레곰</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:20
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=740487&amp;weekday=thu"><strong title="신비">신비</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.80%">★★★★★</em></span>
+                            <strong>9.98</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('740487', this)">
+                            반지</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:24
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=758439&amp;weekday=thu"><strong title="던전 씹어먹는 아티팩트">던전 씹어먹는
+                                아티팩트</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.29%">★★★★★</em></span>
+                            <strong>9.83</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('758439', this)">
+                            제로워터, 엄키 / 엄키</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:11
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=570506&amp;weekday=thu"><strong title="최강전설 강해효">최강전설
+                                강해효</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:96.35%">★★★★★</em></span>
+                            <strong>9.63</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('570506', this)">
+                            최병열</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:18
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=765322&amp;weekday=thu"><strong title="그 황제가 시곗바늘을 되돌린 사연">그
+                                황제가 시곗바늘을 되돌...</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.59%">★★★★★</em></span>
+                            <strong>9.86</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('765322', this)">
+                            화영 / 용끄</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:11
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=748069&amp;weekday=thu"><strong title="선의의 경쟁">선의의
+                                경쟁</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.36%">★★★★★</em></span>
+                            <strong>9.94</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('748069', this)">
+                            송채윤 / 심재영</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:10
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=762035&amp;weekday=thu"><strong title="달의 요람">달의
+                                요람</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:30.52%">★★★★★</em></span>
+                            <strong>3.05</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('762035', this)">
+                            이정선</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:08
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=758678&amp;weekday=thu"><strong
+                                title="루커피쳐">루커피쳐</strong></a><img
+                            src="https://ssl.pstatic.net/static/comic/images/migration/webtoon/ico_new3.gif" width="11"
+                            height="11" alt="NEW" class="new">
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.38%">★★★★★</em></span>
+                            <strong>9.94</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('758678', this)">
+                            효정</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:17
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=729964&amp;weekday=thu"><strong title="만물의 영장">만물의
+                                영장</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.78%">★★★★★</em></span>
+                            <strong>9.98</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('729964', this)">
+                            보민</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:17
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=753222&amp;weekday=thu"><strong title="시월드 판타지">시월드
+                                판타지</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.30%">★★★★★</em></span>
+                            <strong>9.93</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('753222', this)">
+                            진돌 / 히디</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:04
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=758587&amp;weekday=thu"><strong title="자취방 신선들">자취방
+                                신선들</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.55%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('758587', this)">
+                            마로 / 강재건</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:06
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=748831&amp;weekday=thu"><strong title="별을 삼킨 너에게">별을 삼킨
+                                너에게</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.02%">★★★★★</em></span>
+                            <strong>9.90</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('748831', this)">
+                            ARI</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:10
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=715935&amp;weekday=thu"><strong
+                                title="롤랑롤랑">롤랑롤랑</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.83%">★★★★★</em></span>
+                            <strong>9.98</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('715935', this)">
+                            자유</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:18
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=733033&amp;weekday=thu"><strong
+                                title="로그아웃">로그아웃</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:97.63%">★★★★★</em></span>
+                            <strong>9.76</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('733033', this)">
+                            임목원</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:07
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=726091&amp;weekday=thu"><strong
+                                title="오일머니">오일머니</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.48%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('726091', this)">
+                            정하용 / 펜촉</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:08
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=762781&amp;weekday=thu"><strong title="성스러운 아이돌">성스러운
+                                아이돌</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.55%">★★★★★</em></span>
+                            <strong>9.96</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('762781', this)">
+                            스튜디오M / 악사</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:03
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=733076&amp;weekday=thu"><strong
+                                title="겟라이프">겟라이프</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.76%">★★★★★</em></span>
+                            <strong>9.88</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('733076', this)">
+                            MOOHAK</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:16
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=738173&amp;weekday=thu"><strong title="셈하는 사이">셈하는
+                                사이</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.70%">★★★★★</em></span>
+                            <strong>9.97</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('738173', this)">
+                            면지</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:15
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=742351&amp;weekday=thu"><strong
+                                title="소녀180">소녀180</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.53%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('742351', this)">
+                            나우원 / 델라</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:19
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=743270&amp;weekday=thu"><strong
+                                title="집사레인저">집사레인저</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.19%">★★★★★</em></span>
+                            <strong>9.92</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('743270', this)">
+                            현실안주형</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:14
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=731930&amp;weekday=thu"><strong
+                                title="안개무덤">안개무덤</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.53%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('731930', this)">
+                            김태영</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:22
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=758661&amp;weekday=thu"><strong title="유리와 유리와 유리">유리와 유리와
+                                유리</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.48%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('758661', this)">
+                            요엔</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:04
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=724482&amp;weekday=thu"><strong title="미드나잇 체이서">미드나잇
+                                체이서</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:96.79%">★★★★★</em></span>
+                            <strong>9.68</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('724482', this)">
+                            석재윤</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:14
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=738843&amp;weekday=thu"><strong title="불릿 6미리">불릿
+                                6미리</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.74%">★★★★★</em></span>
+                            <strong>9.87</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('738843', this)">
+                            김도근</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:06
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=736928&amp;weekday=thu"><strong
+                                title="스테어스">스테어스</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:95.78%">★★★★★</em></span>
+                            <strong>9.58</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('736928', this)">
+                            옹구</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:05
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=754876&amp;weekday=thu"><strong title="카루나">카루나</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.61%">★★★★★</em></span>
+                            <strong>9.86</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('754876', this)">
+                            강호진</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:02
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=736274&amp;weekday=thu"><strong title="밤하늘에 구름운">밤하늘에
+                                구름운</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.54%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('736274', this)">
+                            견지 / 그리온</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:19
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=751993&amp;weekday=thu"><strong title="보물과 괴물의 도시">보물과 괴물의
+                                도시</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.50%">★★★★★</em></span>
+                            <strong>9.95</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('751993', this)">
+                            이을</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:09
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=727798&amp;weekday=thu"><strong
+                                title="겟백">겟백</strong></a><span class="ico_break">휴재</span>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:99.83%">★★★★★</em></span>
+                            <strong>9.98</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('727798', this)">
+                            세윤</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.02.03 23:22
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=761102&amp;weekday=thu"><strong title="바른탕진 프로젝트">바른탕진
+                                프로젝트</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.52%">★★★★★</em></span>
+                            <strong>9.85</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('761102', this)">
+                            점삼</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:01
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=759475&amp;weekday=thu"><strong title="헬프미">헬프미</strong></a>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:93.35%">★★★★★</em></span>
+                            <strong>9.33</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('759475', this)">
+                            철준</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.03.10 23:13
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=753223&amp;weekday=thu"><strong
+                                title="악령주의보">악령주의보</strong></a><span class="ico_break">휴재</span>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.57%">★★★★★</em></span>
+                            <strong>9.86</strong>
+                        </div>
+                    </td>
+                    <td>
+
+                        <a href="#" onclick="return artistAction.viewArtist('753223', this)">
+                            토마토모닝</a>
+
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.02.26 23:58
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=670145&amp;weekday=thu"><strong
+                                title="킬더킹">킬더킹</strong></a><span class="ico_break">휴재</span>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:96.44%">★★★★★</em></span>
+                            <strong>9.64</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('670145', this)">
+                            마사토끼 / joana</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.02.03 23:20
+
+                    </td>
+                </tr>
+
+                <tr class="">
+
+
+                    <td class="subject">
+                        <a href="/webtoon/list.nhn?titleId=745472&amp;weekday=thu"><strong
+                                title="온새미로">온새미로</strong></a><span class="ico_break">휴재</span>
+                    </td>
+                    <td>
+
+
+
+                        <div class="rating_type">
+                            <span class="star" style="color:red"><em style="width:98.93%">★★★★★</em></span>
+                            <strong>9.89</strong>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <a href="#" onclick="return artistAction.viewArtist('745472', this)">
+                            여우 / 사문</a>
+
+                    </td>
+                    <td class="date">
+
+
+                        2021.01.06 23:10
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
