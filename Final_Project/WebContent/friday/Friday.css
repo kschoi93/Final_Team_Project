@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/*공통*/
+body{ padding:-100 0 0 0 px; margin:0px; width:694px; font-size:12px; font-family:돋움;}
+.star{ color:rgb(249,58,32); font-size:17px; } 
+a:link{ text-decoration: none; color:black; }
+a:visited{ text-decoration:none; color:black; }
+a:hover{ text-decoration:underline;color:black; }
+a:active{ text-decoration:none;color:black; }
+#sortBox{ list-style-type:none;}
+
+/*상단 추천 웹툰*/
+#top{ padding: 0px; margin: 0px; }
+#rec2, .title, #recMiddle, .ti1, .aut, .epi, #star2, #sortBox, #picSort, #listSort, #timeText{ position:relative; } 
+#rec1{ width:694px; height:25px;  display:inline-flex; }
+#rec2, #timeText{ color: #767676; font-size: 10px; font-family:Tahoma; font-weight:bold; }
+#rec2{ top: 3px; left:-480px; width: 50px; }
+#timeText{ left:-478px; top:3px;  }
+#recMiddle>ul>li{ width:218px; height:200.05px; list-style-type:none; } 
+.title{	width:694px; height:27px; font-size: 16px; top:-17px; }
+.title:nth-of-type(1){ border-bottom:lightgray 1px solid; }
+#recMiddle{top:-10px; background-color:pink;}
+#recMiddle>a{color: #434343;}
+#recMiddle>a:nth-of-type(1),#recMiddle>a:nth-of-type(2){ margin-right:12.5px; } 
+#recMiddle>a:nth-of-type(4),#recMiddle>a:nth-of-type(7){ margin-right:180px; }
+#recMiddle>a:nth-of-type(5){ margin-right:165px; } 
+#recMiddle>a:nth-of-type(7){ margin-right:205px; } 
+#recMiddle>a:nth-of-type(8){ margin-right:173px; } 
+#recMiddle>a:nth-of-type(10){ margin-right:178px; } 
+#recMiddle>a:nth-of-type(11){ margin-right:208px; } 
+.ti1{ top:6px; font-weight:bold; }
+.epi{ top:10px; }
+.aut{ top:14px; }
+.recPic{ width:218px; height:120px; }
+.recDetail{ width:218px; }
+.score{ padding:13px 50px 0px 0px ; color:rgb(96,96,96); font-family:Tahoma;} 
+.star1{ margin-right:115px;  }
+#star2{ left:558px; top:-16px; }
+#topCont{ margin-top:43px; } 
+#sortBox{ width:500px; display:inline-flex; top:-70px; left:403px;  font-weight:bold; font-family:맑은고딕; color:gray;}
+#sortBox>li{ margin-right: 11px;}
+#sortBox>li:nth-of-type(1){ color:rgb(35,214,120);}
+#picSort{ top: -2px; left: 3px; }
+#listSort{ top: -2px; left: -8px; }
+
+
+
+
+
+
+
