@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>웹툰 목요일</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<Style>
+    *{margin:0; padding: 0; list-style-type: none;}
+    #thursDayGood>ul>li{
+        float: left;
+        padding-right: 20px; 
+    }
+    #thursDayGood{
+        overflow:auto;
+        width:800px;
+    }
+    #thursDayMain>ul>li{
+        float:left;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    #thursDayMain>ul>li>a>span{
+        text-align: right;
+    }
+    #jump>li{
+        margin-left: 10px;
+
+    }
+    #some{
+        margin-left: 10px;
+    }
+    #popularity{
+        padding-left: 280px;
+    }
+    #thursDayMain{      
+        padding-top: 30px;
+        width: 800px;
+    }
+    hr{
+        overflow:auto;
+        width: 700px;
+    }
+    #contents>li>div{
+        float:left;
+    }
+    #contents{     
+        padding-top: 30px;
+        overflow:auto;
+        width:800px;
+    }
+    #contents>li{
+        float:left;
+        margin-bottom: 20px;
+    }
+    #webname{
+        overflow:auto;
+    }
+    #contents>li:not(:nth-child(3n+1)){
+        margin-left: 50px;
+    }
+    #toDay{
+        font-size: 15px;
+    }
+    #thurs{
+        padding-bottom: 10px;
+    }
+    .upstiker{
+        display:none;
+    }
+</Style>
+<script>
+    var dateTime = new Date();
+    var timeTxt = dateTime.getFullYear()+".";
+		timeTxt += (dateTime.getMonth()+1)+ ".";
+		timeTxt += dateTime.getDate();
+    $(function(){
+        $("#webdate").append(timeTxt);
+
+        if(dateTime.getDay()==2){
+             $(".upstiker").css("display","block");
+        }
+    });
+</script>
+</head>
+<body>
+    <!-- 목요추천웹툰 상단바 -->
+    <div id="thursDayGood">
+        <h1 id="thurs">목요 추천웹툰 <span id="toDay">TODAY: <a id="webdate"></a></span></h1>
+        <ul>
+            <li>
+                <div>
+                    <a herf="#"><img src="img/m2.png"/></a>
+                </div>
+                <dt>
+                    <a href = "#">
+                        <strong title="카루나">카루나</strong>
+                    </a>
+                </dt>
+                <dt>
+                    <a href="#" title="22. 성격 까칠한 새 친구">22. 성격 까칠한 새 친구</a>
+                </dt>
+                <dt>
+                    <a href="#" title="강호진">강호진</a>
+                </dt>
+                <dt style="color : red">
+                    ★★★★★ <span style="color: black;">9.88</span>
+                </dt>
+            </li>
+            <li>
+                <div>
+                    <a herf="#"><img src="img/m3.png"/></a>
+                    <em class="ico_updt"></em>
+                </div>
+                <dt>
+                    <a href = "#">
+                        <strong title="당신의 과녁">당신의 과녁</strong>
+                    </a>
+                </dt>
+                <dt>
+                    <a href="#" title="62화">62화</a>                   
+                </dt>
+                <dt>
+                <a href=# title="고태호">고태호</a>
+                </dt>
+                <dt style="color : red">
+                    ★★★★★ <span style="color : black">9.98</span>
+                </dt>
+            </li>
+            <li>
+                <div>
+                    <a herf="#"><img src="img/m1.png"/></a>
+                </div>
+                <dt>
+                    <a href = "#">
+                        <strong title="당신의 과녕">그 황제가 시곗바늘을 되돌린 ...</strong>
+                    </a>
+                </dt>
+                <dt>
+                    <a href="#" title="5화">5화</a>
+                </dt>
+                <dt>
+                    <a href="#" title="화영/용끄">화영/용끄</a>
+                </dt>
+                <dt style="color : red">
+                    ★★★★★ <span style="color : black">9.92</span>
+                </dt>
+            </li>
+        </ul>
+    </div>
+    <div id="thursDayMain">
+        <!-- 클릭시 이벤트생성해야함 -->
+        <ul>
+            <li>목요 전체 웹툰</li>
+        </ul>
+        <!-- 썸네일형 리스트형 자바스크립트 써야함-->
+        <ul id="jump">
+            <li><a href="#"><span id="popularity">인기순</span></a></li>
+            <li><a href="#"><span>업데이트순</span></a></li>
+            <li><a href="#"><span>조회순</span></a></li>
+            <li><a href="#"><span>별점순</span></a></li>
+        </ul>
+        <ul>
+            <li id="some"><a href="#"><img src="img/1.PNG" width="19" height="19" title="썸네일형"></a></li>
+            <li><a href="Thursdayscript.html"><img src="img/2.PNG" width="19" height="19" title="리스트형"></a></li>
+        </ul>
+    </div>
+    <br><br>
+    <hr/>
+    <div id="contents">
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/748105/thumbnail/thumbnail_IMAG10_becd3e24-cc09-4243-a1c9-646270f4a8db.jpg" width="83" height="90" title="독립일기" alt="독립일기">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:360px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="독립일기">독립일기</a></dt>
+                <dd>
+                    <a href="#">자까</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/736989/thumbnail/thumbnail_IMAG10_dc639e95-a787-49bd-9bb6-b835909a764d.jpg" width="83" height="90" title="더 복서" alt="더 복서">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:360px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=736989&weekday=thu" title="더 복서">더 복서</a></dt>
+                <dd>
+                    <a href="#">정지훈</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.94</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=736989&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/570503/thumbnail/thumbnail_IMAG10_023d23be-91f9-46c5-a1ff-152d6238e892.jpg" width="83" height="90" title="연애혁명" alt="연애혁명">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:360px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=570503&weekday=thu" title="연애혁명">연애혁명</a></dt>
+                <dd>
+                    <a href="#">232</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.87</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=570503&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/557672/thumbnail/thumbnail_IMAG10_d05c81ab-ea19-473b-818f-3aceb657ae1e.jpg" width="83" height="90" title="기기괴괴" alt="기기괴괴">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:475px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="기기괴괴">기기괴괴</a></dt>
+                <dd>
+                    <a href="#">오성대</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/731130/thumbnail/thumbnail_IMAG10_0f5fa6cc-3d7c-4e20-a42d-60b32de309e5.jpg" width="83" height="90" title="이두나!" alt="이두나">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:475px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="이두나!">이두나!</a></dt>
+                <dd>
+                    <a href="#">민송아</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.96</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/739503/thumbnail/thumbnail_IMAG10_f515191d-adb2-466c-b014-66b276d8b471.jpg" width="83" height="90" title="화이트 블러드" alt="화이트 블러드">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:475px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="화이트 블러드">화이트 블러드</a></dt>
+                <dd>
+                    <a href="#">임리나</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/747271/thumbnail/thumbnail_IMAG10_107ce0d9-e0a3-4846-b7e1-8597fa4e980a.jpg" width="83" height="90" title="나노마신" alt="나노마신">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:590px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="나노마신">나노마신</a></dt>
+                <dd>
+                    <a href="#">현절무/금강불괴</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.96</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/756137/thumbnail/thumbnail_IMAG10_64143a9b-dfdb-4f2e-878d-5f3453a82475.jpg" width="83" height="90" title="노답소녀" alt="노답소녀">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:590px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="노답소녀">노답소녀</a></dt>
+                <dd>
+                    <a href="#">석우</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.79</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/762279/thumbnail/thumbnail_IMAG10_7eca3c20-7c36-49b7-a7af-af933e9c8c09.jpg" width="83" height="90" title="정글쥬스" alt="정글쥬스">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:590px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="정글쥬스">정글쥬스</a></dt>
+                <dd>
+                    <a href="#">형은/쥬더</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.92</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/710761/thumbnail/thumbnail_IMAG10_9f8253a1-2318-4c0d-8d9e-f044f2203d4c.jpg" width="83" height="90" title="하드캐리" alt="하드캐리">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:705px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="하드캐리">하드캐리</a></dt>
+                <dd>
+                    <a href="#">조양</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.91</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/766982/thumbnail/thumbnail_IMAG10_184845e1-5958-4360-8238-c234ff200078.jpg" width="83" height="90" title="희망강림" alt="희망강림">
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:705px;"/>
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="희망강림">희망강림</a></dt>
+                <dd>
+                    <a href="#">야옹이</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★☆</span>
+                        <strong>7.20</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li style="width: 210px;">
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:705px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/637931/thumbnail/thumbnail_IMAG10_f3fcdcff-76fe-43d8-ba90-1e38b5306879.jpg" wclassth="83" height="90" title="전자오락수호대" alt="전자오락수호대">
+            </div>
+            <dl class="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="전자오락수호대">전자오락수호대</a></dt>
+                <dd>
+                    <a href="#">가스파드</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:820px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/746857/thumbnail/thumbnail_IMAG10_0e5a96ba-ee85-4de9-9996-b59852281617.jpg" width="83" height="90" title="무사만리행" alt="무사만리행">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="무사만리행">무사만리행</a></dt>
+                <dd>
+                    <a href="#">운/배민기</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.93</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:820px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/766503/thumbnail/thumbnail_IMAG10_d1bfddf4-05e2-479a-b4f3-51b10580248b.jpg" width="83" height="90" title="마계인섬" alt="마계인섬">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="마계인섬">마계인섬</a></dt>
+                <dd>
+                    <a href="#">초</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.31</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:820px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/741825/thumbnail/thumbnail_IMAG10_2cb48835-dbbb-429c-b391-91a57775717e.jpg" width="83" height="90" title="꽃만 키우는데 너무강함" alt="꽃만 키우는데 너무강함">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="꽃만 키우는데 너무강함">꽃만 키우는데...</a></dt>
+                <dd>
+                    <a href="#">쿰타타/주현후</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:935px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/738194/thumbnail/thumbnail_IMAG10_1c31f225-1f88-40f3-925e-928776169bf5.jpg" width="83" height="90" title="당신의 과녁" alt="당신의 과녁">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="당신의 과녁">당신의 과녁</a></dt>
+                <dd>
+                    <a href="#">고태호</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.96</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:935px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/701700/thumbnail/thumbnail_IMAG10_91d1c77b-9ad9-43ce-8299-ed986700c65a.jpg" width="83" height="90" title="트롤트랩" alt="트롤트랩">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="트롤트랩">트롤트랩</a></dt>
+                <dd>
+                    <a href="#">유비</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.95</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:935px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/716857/thumbnail/thumbnail_IMAG10_fb5f2776-982c-4891-b844-e617a907d5c9.jpg" width="83" height="90" title="오늘의 순정망화" alt="오늘의 순정망화">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="오늘의 순정망화">오늘의 순정망화</a></dt>
+                <dd>
+                    <a href="#">손하기</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1050px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/758673/thumbnail/thumbnail_IMAG10_2d7f467a-5ba9-4cba-99ec-30186230110c.jpg" width="83" height="90" title="어차피 남편은!" alt="어차피 남편은!">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="어차피 남편은!">어차피 남편은!</a></dt>
+                <dd>
+                    <a href="#">찡나</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.77</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1050px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/131385/thumbnail/thumbnail_IMAG10_c5053bcc-3b95-473d-bfe1-e4256bf56b58.jpg" width="83" height="90" title="쿠베라" alt="쿠베라">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="쿠베라">쿠베라</a></dt>
+                <dd>
+                    <a href="#">카레곰</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.96</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1050px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/740487/thumbnail/thumbnail_IMAG10_953f1353-c4c0-4821-a716-d8bc4c9febfe.jpg" width="83" height="90" title="신비" alt="신비">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="신비">신비</a></dt>
+                <dd>
+                    <a href="#">반지</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.98</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1160px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/758439/thumbnail/thumbnail_IMAG10_08abada1-ebb5-41cc-a28e-e3a71a422202.jpg" width="83" height="90" title="던전 씹어먹는 아티팩트" alt="던전 씹어먹는 아티팩트">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="던전 씹어먹는 아티팩트">던전 씹어먹는...</a></dt>
+                <dd>
+                    <a href="#">제로워터</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1160px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/570506/thumbnail/title_thumbnail_20130710192300_t83x90.jpg" width="83" height="90" title="최강전설 강해효" alt="최강전설 강해효">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="최강전설 강해효">최강전설 강해효</a></dt>
+                <dd>
+                    <a href="#">최병열</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.63</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1160px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/765322/thumbnail/thumbnail_IMAG10_37907656-fba7-481d-84cc-7d804d0e14b6.jpg" width="83" height="90" title="그 황제가 시곗바늘을 되돌린 사연" alt="그 황제가 시곗바늘을 되돌린 사연">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="그 황제가 시곗바늘을 되돌린 사연">그 황제가 시..</a></dt>
+                <dd>
+                    <a href="#">화영/용끄</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.86</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1270px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/748069/thumbnail/thumbnail_IMAG10_380a50c3-28a5-46f4-8f20-0f2269e16650.jpg" width="83" height="90" title="선의의 경쟁" alt="선의의 경쟁">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="선의의 경쟁">선의의 경쟁</a></dt>
+                <dd>
+                    <a href="#">송채윤/심재영</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.94</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1270px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/762035/thumbnail/thumbnail_IMAG10_1ba3eada-ce8b-4913-a3d3-a34b40b108fc.jpg" width="83" height="90" title="달의 요람" alt="달의 요람">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="달의 요람">달의 요람</a></dt>
+                <dd>
+                    <a href="#">이정선</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★☆☆☆</span>
+                        <strong>3.05</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1270px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/758678/thumbnail/thumbnail_IMAG10_03ebb3b9-d4f1-4b5a-a96b-ac9973197272.jpg" width="83" height="90" title="루커피쳐" alt="루커피쳐">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="루커피쳐">루커피쳐</a></dt>
+                <dd>
+                    <a href="#">효정</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.94</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1385px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/729964/thumbnail/thumbnail_IMAG10_8935ee89-7619-4466-abf6-b6c4d6e6f734.jpg" width="83" height="90" title="만물의 영장" alt="만물의 영장">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="만물의 영장">만물의 영장</a></dt>
+                <dd>
+                    <a href="#">보민</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.98</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1385px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/753222/thumbnail/thumbnail_IMAG10_c81cfc5e-6a3c-4dc1-9975-42fc87cbff82.jpg" width="83" height="90" title="시월드 판타지" alt="시월드 판타지">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="시월드 판타지">시월드 판타지</a></dt>
+                <dd>
+                    <a href="#">진돌/히디</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.93</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1385px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/758587/thumbnail/thumbnail_IMAG10_c55ec5af-63f5-4f34-9a57-a074cd41a1bf.jpg" width="83" height="90" title="자취방 신선들" alt="자취방 신선들">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="자취방 신선들">자취방 신선들</a></dt>
+                <dd>
+                    <a href="#">마로/강재건</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1500px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/748831/thumbnail/thumbnail_IMAG10_f836766e-7ac9-46f7-b392-91f294567ca6.jpg" width="83" height="90" title="별을 삼킨 너에게" alt="별을 삼킨 너에게">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="별을 삼킨 너에게">별을 삼킨 너..</a></dt>
+                <dd>
+                    <a href="#">ARI</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.90</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1500px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/715935/thumbnail/thumbnail_IMAG10_9b592a70-da0a-4637-8824-0444f9083247.jpg" width="83" height="90" title="롤랑롤랑" alt="롤랑롤랑">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="롤랑롤랑">롤랑롤랑</a></dt>
+                <dd>
+                    <a href="#">자유</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.98</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1500px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/733033/thumbnail/thumbnail_IMAG10_d7d0a0fb-b5e8-447c-82d5-bb4c0d73e843.jpg" width="83" height="90" title="로그아웃" alt="로그아웃">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="로그아웃">로그아웃</a></dt>
+                <dd>
+                    <a href="#">임목원</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.98</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1615px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/726091/thumbnail/thumbnail_IMAG10_56a5bcbd-eb11-481d-b0f0-a7a421e430ea.jpg" width="83" height="90" title="오일머니" alt="오일머니">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="오일머니">오일머니</a></dt>
+                <dd>
+                    <a href="#">정하용/펜촉</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.95</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1615px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/762781/thumbnail/thumbnail_IMAG10_e80d1b5c-bd28-4afb-98c2-aa89578720da.jpg" width="83" height="90" title="성스러운 아이돌" alt="성스러운 아이돌">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="성스러운 아이돌">성스러운 아이돌</a></dt>
+                <dd>
+                    <a href="#">스튜디오M</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.96</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1615px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/733076/thumbnail/thumbnail_IMAG10_9c070ef4-e569-4a14-b1cf-7ce368c07016.jpg" width="83" height="90" title="겟라이프" alt="겟라이프">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="겟라이프">겟라이프</a></dt>
+                <dd>
+                    <a href="#">MOOHAK</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.88</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1730px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/738173/thumbnail/thumbnail_IMAG10_08b0310b-b45b-45ef-80b4-34ae9c4e7e7a.jpg" width="83" height="90" title="셈하는 아이" alt="셈하는 아이">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="셈하는 아이">셈하는 아이</a></dt>
+                <dd>
+                    <a href="#">면지</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.97</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1730px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/742351/thumbnail/thumbnail_IMAG10_3fdceb38-bcc8-419e-b4de-1cc70eb2be71.jpg" width="83" height="90" title="소녀180" alt="소녀180">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="소녀180">소녀180</a></dt>
+                <dd>
+                    <a href="#">나우원/델라</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.95</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1730px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/731930/thumbnail/thumbnail_IMAG10_0217e232-d198-4562-b80a-495e711c2aea.jpg" width="83" height="90" title="안개무덤" alt="안개무덤">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="안개무덤">안개무덤</a></dt>
+                <dd>
+                    <a href="#">김태영</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.95</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1845px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/743270/thumbnail/thumbnail_IMAG10_dd5f95ab-7a6e-4137-8b5d-08003870a308.jpg" width="83" height="90" title="집사레인저" alt="집사레인저">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="집사레인저">집사레인저</a></dt>
+                <dd>
+                    <a href="#">현실안주형</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.92</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1845px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/758661/thumbnail/thumbnail_IMAG10_3faf68b4-8419-4cc5-9f39-badea2abc1c5.jpg" width="83" height="90" title="유리와 유리와 유리" alt="유리와 유리와 유리">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="유리와 유리와 유리">유리와 유리와..</a></dt>
+                <dd>
+                    <a href="#">요엔</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.95</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1845px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/758661/thumbnail/thumbnail_IMAG10_3faf68b4-8419-4cc5-9f39-badea2abc1c5.jpg" width="83" height="90" title="미드나잇 체이서" alt="미드나잇 체이서">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="미드나잇 체이서">미드나잇 체이서</a></dt>
+                <dd>
+                    <a href="#">석재윤</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.68</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:1960px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/738843/thumbnail/thumbnail_IMAG10_59c8f980-8206-4702-b824-e4fe5a81b947.jpg" width="83" height="90" title="볼릿 6미리" alt="볼릿 6미리">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="볼릿 6미리">볼릿 6미리</a></dt>
+                <dd>
+                    <a href="#">김도근</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.87</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:1960px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/736928/thumbnail/thumbnail_IMAG10_476e0ea8-5dfe-4927-86e0-cd46a0740d07.jpg" width="83" height="90" title="스테어스" alt="스테어스">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="스테어스">스테어스</a></dt>
+                <dd>
+                    <a href="#">응구</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.58</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:1960px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/754876/thumbnail/thumbnail_IMAG10_92cf9f87-01e2-45ef-9363-d8105cbfe251.jpg" width="83" height="90" title="카루나" alt="카루나">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="카루나">카루나</a></dt>
+                <dd>
+                    <a href="#">강호진</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.86</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:2075px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/736274/thumbnail/thumbnail_IMAG10_d1ab3c65-38aa-45a9-978b-fec6693e5c1c.jpg" width="83" height="90" title="밤하늘에 구름운" alt="밤하늘에 구름운">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="밤하늘에 구름운">밤하늘에 구름운</a></dt>
+                <dd>
+                    <a href="#">견지/그리온</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.95</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:2075px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/751993/thumbnail/thumbnail_IMAG10_b369a138-95fe-43de-879d-61061000c6d0.jpg" width="83" height="90" title="보물과 괴물의 도시" alt="보물과 괴물의 도시">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="보물과 괴물의 도시">보물과 괴물의..</a></dt>
+                <dd>
+                    <a href="#">이을</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.95</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:2075px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/761102/thumbnail/thumbnail_IMAG10_a1ff5ded-1d8c-4131-afe0-7d5de71261f5.jpg" width="83" height="90" title="바른탕진 프로젝트" alt="바른탕진 프로젝트">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="바른탕진 프로젝트">바른탕진 프로..</a></dt>
+                <dd>
+                    <a href="#">점삼</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.85</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:2185px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/727798/thumbnail/thumbnail_IMAG10_77a817e9-fbaf-4507-9e19-414b7ee58c30.jpg" width="83" height="90" title="겟백" alt="겟백">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="겟백">겟백</a></dt>
+                <dd>
+                    <a href="#">세윤</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.98</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:2185px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/759475/thumbnail/thumbnail_IMAG10_9003282a-c9b3-46a6-9146-9c8c1eda713f.jpg" width="83" height="90" title="헬프미" alt="헬프미">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="헬프미">헬프미</a></dt>
+                <dd>
+                    <a href="#">철준</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.33</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:560px; top:2185px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/753223/thumbnail/thumbnail_IMAG10_a9161321-71eb-44ec-b237-a73907f4e5c5.jpg" width="83" height="90" title="악령주의" alt="악령주의">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="악령주의">악령주의</a></dt>
+                <dd>
+                    <a href="#">토마토모닝</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.86</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:60px; top:2300px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/670145/thumbnail/title_thumbnail_20160105121235_t83x90.jpg" width="83" height="90" title="킬더킹" alt="킬더킹">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="킬더킹">킬더킹</a></dt>
+                <dd>
+                    <a href="#">미사토끼</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.64</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+        <li>
+            <div>
+                <img src="img/100.png" class="upstiker" style="position:absolute; left:310px; top:2300px;"/>
+                <img src="https://shared-comic.pstatic.net/thumb/webtoon/745472/thumbnail/thumbnail_IMAG10_bfdeefe4-0c13-40bf-8546-f6a017897291.jpg" width="83" height="90" title="온새미로" alt="온새미로">
+            </div>
+            <dl id="webname">
+                <dt><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu" title="온새미로">온새미로</a></dt>
+                <dd>
+                    <a href="#">여우/사문</a>
+                </dd>
+                <dd>
+                    <div>
+                        <span style="width:99.75%; color:red">★★★★★</span>
+                        <strong>9.89</strong>
+                    </div>
+                </dd>
+                <dd class="more"><a href="https://comic.naver.com/webtoon/list.nhn?titleId=748105&weekday=thu">전체보기</a></dd>
+                </dl>
+        </li>
+    </div>
+</body>
+</html>
