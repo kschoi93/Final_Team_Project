@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lib/bootstrap.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="lib/bootstrap.js"></script>
+<style>
+	.thumnails{
+		width:231px;
+		height:115px;
+		margin:0px;
+		padding:0px;
+		padding-right:1px;
+		float:left;
+	}
+	#main{
+		margin:0 auto;
+		width:700px;
+	}
+	ul, li{
+		font-size:8px;
+		margin-left:40px;
+		margin:0px;
+	}
+	ul{
+		width:124px;
+		height:109px;
+		padding-top:10px;
+		padding-bottom:10px;
+		padding-left:0px;
+		padding-right:0px;
+	}
+	li{
+		list-style-type:none;
+		font-size:12px;
+		margin:0px;
+	}
+	ul, .thumnails>img{
+		float:left;
+	}
+	.thumnails>img{
+		padding:10px;
+	}
+	.thumnails>ul>li:nth-child(3)>span:nth-child(1){
+		color:red;
+		margin:0px;
+		width:65px;
+	}
+	
+	.thumnails>ul>li:nth-child(1){ /* 작품명 */
+		font-weight:700;
+	}
+	.thumnails>ul>li:nth-child(2){ /* 작가명 */
+		
+	}
+	.thumnails>ul>li:nth-child(3){ /* 별점 */
+		font-weight:bold;
+		float:left;
+	}
+	.thumnails>ul>li:last-child{
+		font-size:11px;
+		margin-top:35px;
+	}
+	#bottomInfo{
+		font-size:16px;
+	}
+	#bottomInfo>div{
+		font-size:12px;
+		padding:2px;
+		float:left;
+	}
+	#bottomInfo>div:nth-child(2){ /* 인기순 */
+		margin-left:400px;
+	}
+	#bottomInfo>span:nth-child(3){ /* 업데이트순 */
+	}
+	#bottomInfo>span:nth-child(4){ /* 조회순 */
+	}
+	#bottomInfo>span:nth-child(5){ /* 별점순 */
+	}
+	#bottomInfo>div:nth-child(6){ /* 썸네일형 */
+		margin-left:10px;
+	}
+	#bottomInfo>div:nth-child(7){ /* 리스트형 */
+	}
+	.list1a, .list1, .list3a, .list3, .list4a, .list4{
+		background-image:url(../webtoon/sp_ico_334138d8.png);
+		width:31px;
+		height:9px;
+	}
+	.list1a{
+		background-position:-94px -85px;
+	}
+	.list1{
+		background-position:-97px -121px;
+	}
+	.list2a{
+		background-image:url(../webtoon/sp_ico_334138d8.png);
+		width:53px;
+		height:11px;
+		background-position:-0px -85px;
+	}
+	.list2{
+		background-image:url(../webtoon/sp_ico_334138d8.png);
+		width:53px;
+		height:11px;
+		background-position:-40px -69px;
+	}
+	.list3a{
+		background-position:-58px -85px;
+	}
+	.list3{
+		background-position:-133px -120px;
+	}
+	.list4a{
+		background-position:-35px -148px;
+		padding-bottom:0px;
+	}
+	.list4{
+		background-position:-0px -148px;
+		padding-bottom:0px;
+	}
+	
+	
+	
+
+</style>
+<script>
+	var titles = ["여신강림"," 한림체육관"," 바름연애 길잡이"," 엽총소년"," 하루만 네가..."," 랜덤채팅의 그..."," 중증외상센터 ..."," 사신소년"," 헬58"," 신도림"," 호랑이 들어와요"," 삼국지톡"," 위아더좀비"," 악인"," 원주민 공포만화"," 달콤살벌한 부부"," 집이 없어"," 빌런투킬"," 태시트"," 오피스 누나 ..."," 오늘의 순정망화"," 윌유메리미"," 아이레"," 견우와 선녀"," 용왕님의 셰프..."," 올가미"," 성인초딩"," 플레이 플리"," 3cm헌터"," 빅맨"," 그놈은 흑염룡"," 아이즈"," 한강예찬"," 제로게임"," 하우스키퍼"," 별종"," 정년이"," 여우의 순정"," 오파츠"," 숲속의 담"," 빛빛빛"," 풋내기들"," 은주의 방 2..."," 열녀박씨 계약..."," 조선홍보대행사..."," 자판귀"," 안식의 밤"," 완벽한 가족"," 도를 아십니까"," 나의 플랏메이트"," 필살VS로맨스"," 언메이크"," 피로만땅"," 장단에 맞춰줘!"," 인문학적 감수성"];
+	var authors = ["야옹이"," 혜성/이석재"," 남수"," 김칸비/홍필"," 삼"," 박은혁"," 한산이가/홍비치라"," 류"," 장성준"," 오세형"," 배세혁/유은"," 무적핑크/이리"," 이명재"," 광탄토/마두르"," 원주민"," 플라비/장그린"," 와난"," 퓨핀/은지"," 김다찌"," 김자네/와삭바삭"," 손하기"," 마인드C"," 설이/Team설이"," 안수민"," 문백경/카라쿨"," 해무리"," 미티"," 이에프"," 돌연변이"," 하하영"," 혜진양"," 정썸머"," 김8"," 즐바센"," 채용택/유현"," 이무기"," 서이레/나몬"," 이솔"," 성진/부겸"," 다홍"," 수진"," 신여름"," 노란구미"," 김너울/안젤리크/닷다"," 김양수"," 윤정민"," 연제원"," 냥빠/주은"," 이건/요엘"," 산삼"," 구르"," 박화랑"," 샤니"," 햇님"," 교날/번암"];
+	var stars = ["9.61"," 9.73"," 9.97"," 9.95"," 9.98"," 9.64"," 9.97"," 9.93"," 9.95"," 9.95"," 9.96"," 9.93"," 9.93"," 9.88"," 9.91"," 9.95"," 9.96"," 9.81"," 9.83"," 9.83"," 9.98"," 9.93"," 9.80"," 9.98"," 9.98"," 9.97"," 9.72"," 9.97"," 9.89"," 9.79"," 9.97"," 9.86"," 9.95"," 9.97"," 9.97"," 9.94"," 9.98"," 9.97"," 9.59"," 9.98"," 9.94"," 9.89"," 9.94"," 9.89"," 9.88"," 9.95"," 9.93"," 9.93"," 9.90"," 9.94"," 9.97"," 9.85"," 9.92"," 9.82"," 9.93"];
+	$(function(){
+		titles.map(function(value, index){
+			tag = "<div class = 'thumnails'>"+"<img src='../webtoon/thumnail"+(index+1)+".jpg'>";
+			tag += "<ul><li>"+value+"</li>";
+			tag += "<li>"+authors[index]+"</li>";
+			tag += "<li><span>★★★★★</span>"+stars[index]+"</li>";	
+			tag += "<li><span>전체보기</span></li>";
+			tag += "</ul></div>";
+			$("#bottom").append(tag);
+		});
+	});
+	
+
+	
+	
+</script>
+</head>
+<body>
+<div id="main">
+	<div id="top">위쪽</div>
+	<div id="bottomInfo"><div>화요 전체 웹툰</div><div class="list1a"></div><div class="list2"></div><div class="list3"></div><div class="list4"></div><span>▣</span><span>▤</span></div>
+	<hr>
+	<div id="bottom"></div>
+</div>
+
+</body>
+</html>
