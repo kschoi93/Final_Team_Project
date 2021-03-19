@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+ body{
+  padding:5px;
+  margin:0 auto;
+  width:900px;
+ }
+ 
+#title{
+  width:900px;
+  padding:0px;
+  
+}
+
+#titlebox{
+  margin-top:5px;
+  margin-bottom:10px;
+  width:900px; 
+  float:left;
+  padding:0px; 
+  
+}
+
+a{
+text-decoration: none;
+}
+
+
+ #titlebox>li,#category>li,#comiclist>li ,#comictext>li,ul{
+    list-style-type:none;
+    float:left;
+ }
+
+
+ #titlebox>li{
+ margin:10px;
+}
+
+
+#centertitle>div{
+ float:left;
+ margin:3px;
+ height:30px;
+}
+
+
+
+#category{
+margin:3px;
+width:240px;
+height:10px;
+padding:0 auto;
+float:right;
+
+}
+
+
+#category>li{
+margin:4px;
+font-size:0.5em;
+color:gray;
+padding:0px;
+
+}
+
+#category>li:nth-child(5),#category>li:nth-child(6){
+margin:0px;
+}
+
+hr{
+width:870px;
+}
+
+
+#comiclist{
+		width:840px;
+		
+}
+
+#comiclist>
+
+#star{
+	width:30px;
+}
