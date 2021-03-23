@@ -27,18 +27,15 @@ $(function(){
 		tag += "<li><a href='#' onclick='return false;' id='all'>전체보기<img src='img/triangle.png'></a></li></ul></div>"; 
 		$('#desc').append(tag);  
 	}
-		  
-	   
+		   
 	 //--------------------------------------------------# 금요일에 업로드 표시하기
 	 var day = dateTime.getDay();
 	 
 	 var up="";
-	 if(day==7){
+	 if(day==5){
 		 up ="<img class='up' src='img/up.png'>"; 
 		 $('.picUl').append(up); 	 
-	 }
-
-	
+	 }  
 });
 </script>
 </head>
