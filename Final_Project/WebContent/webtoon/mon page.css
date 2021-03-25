@@ -25,7 +25,6 @@ a{
 text-decoration: none;
 }
 
-
  #titlebox>li,#category>li,#comiclist>li ,#comictext>li,ul{
     list-style-type:none;
     float:left;
@@ -68,17 +67,65 @@ margin:0px;
 }
 
 hr{
-width:870px;
+width:900px;
+margin-bottom:40px;
+}
+
+#comictxt>ul#liul{
+	float:left;
+	padding-left:0px;
+	width:850px;
+	
+
+	
 }
 
 
-#comiclist{
-		width:840px;
-		
+#comictxt>ul #liul>li{
+	padding:0px;	
+	text-align:center;
 }
 
-#comiclist>
-
-#star{
-	width:30px;
+ 
+#comictxt>hr{
+	margin-bottom:0px;
 }
+
+
+#comictxt>div #imgbiglst{
+	width:800px;
+	padding-right:30px;
+	
+}
+
+
+#comictxt>div #imglst{
+
+	float:left;
+	padding-left:10px;
+	padding-right:5px;
+}
+
+#comictxt>div #imglst>a>img{
+ float:left;
+ width:100px;
+ height:114px;	
+ margin:0 auto;
+ padding:0 auto;
+ 
+}
+
+
+
+#comictxt>div>#imgul{
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-left:10px;
+	margin-right:25px;
+	width:150px;
+	height:154px;
+	
+}
+
+
+
