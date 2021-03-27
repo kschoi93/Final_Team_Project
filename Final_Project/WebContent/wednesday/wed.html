@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 <title>Insert title here</title>
 <link rel="stylesheet" href="wed.css" type="text/css"/>
+
 <!--썸네일, 리스트-->
 
 <script>
@@ -30,7 +31,7 @@ $(function(){
 
 // sort 클릭시 색 변환
 $('.viewName').hover(function(){
-            $(this).children('a').css('color','green').css('font-weight','bold');
+            $(this).children('a').css('color','rgb(0,213,100)').css('font-weight','bold');
          }, function () {
             // 마우스가 벗어나면
              $(this).children('a').css('color','black').css('font-weight','normal');
@@ -108,16 +109,20 @@ $('.viewName').hover(function(){
 	});
 
 	
-	$("#wed").html(wednesDay);
+
 	
 	if(day==3){
 		up='<img class="up" src="wed_img/up.png">';
 		$("").css("display","block");
 	}
 
-
-
-
+	//<span class="spanDay" id="wednesday"><a href="wednesday/wed.html" onclick="wednesday/wed.html">수요웹툰</a></span>
+	//$('index.html hr').click('/index.html #wednesday').html('#wed');
+	//$('#wed').onclick('index.html #wednesday').html('index.html hr');
+	// $('index.html #wednesday').onclick(function(){
+	// 	console.log('aa');
+	// 	$('index.html hr').append('#wed');
+	// });
 	
 		
 });
