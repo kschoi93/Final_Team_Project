@@ -14,6 +14,7 @@
 $(function(){
 	//id="date" 날짜 세팅 --> 수정할 것 : 해당 월의 수요일인 일만 나오도록
 	var date = new Date();
+	var day = date.getDay();
 	var wed;
 
 	for(var i=0; i<7; i++){
@@ -107,7 +108,12 @@ $('.viewName').hover(function(){
 	});
 
 	
-
+	$("#wed").html(wednesDay);
+	
+	if(day==3){
+		up='<img class="up" src="wed_img/up.png">';
+		$("").css("display","block");
+	}
 
 
 
