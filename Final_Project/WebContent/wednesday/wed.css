@@ -110,4 +110,5 @@ th, td{
     border-bottom: 1px solid #eee;
     line-height: 18px;
 }
+#wed_list{display: none;}
 .listSubject, .listAuthor{font-weight: bold;}
