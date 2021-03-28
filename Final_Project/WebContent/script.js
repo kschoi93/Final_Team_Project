@@ -1,4 +1,4 @@
-  $(function(){
+$(function(){
 		//--------------------------------------------------#searchTxt placeholder 설정
 		$('#searchTxt').click(function(){
 			$('#searchTxt').attr('placeholder','');
@@ -184,6 +184,4 @@
 			}
 			console.log($(this).attr('id'));
 		});
-
-
 	});
