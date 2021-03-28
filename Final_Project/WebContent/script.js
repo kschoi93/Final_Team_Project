@@ -184,4 +184,6 @@
 			}
 			console.log($(this).attr('id'));
 		});
+
+
 	});
