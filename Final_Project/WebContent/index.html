@@ -34,6 +34,27 @@
 	</ul>
 </div>
 <hr>
+<script>
+	$(function(){
+		/* 파일명을 설정해 주시면 아이프레임으로 나옵니다, href도 없애주셔야 합니당*/
+		/* $("#monday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		}); */
+		$("#tuesday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		});
+		/* $("#wednesday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		}); */
+		/* $("#thursday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		}); */
+		/* $("#friday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		}); */
+	});
+	
+</script>
 <div id="section">
 	<div id="sectionLeft">
 		<div id="webtoonMenu">
@@ -45,6 +66,9 @@
 			<span class="spanDay" id="friday"><a href="#" onclick="return false">금요웹툰</a></span>
 			<span class="spanDay" id="saturday"><a href="#" onclick="return false">토요웹툰</a></span>
 			<span class="spanDay" id="sunday"><a href="#" onclick="return false">일요웹툰</a></span>
+		</div>
+		<div id="iframeDiv">
+			<iframe src="" width="700" height="2221" frameborder="0" scrolling="no" id="iframeWebtoon"></iframe>
 		</div>
 		<hr>
 		
