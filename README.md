@@ -14,6 +14,10 @@
 
 > 셋째, Final Team Project에 사용될 예정
 
+> 팀 협업 툴
+** Notion : https://www.notion.so/1-bfa2de9b5d1243109d53a8dcbdf0b0c9
+** Google Drive : ..
+** Kakao Oven : ..
 
 ■ Toy Project : Naver Webtoon Page ( https://comic.naver.com/webtoon/weekday.nhn );
 
