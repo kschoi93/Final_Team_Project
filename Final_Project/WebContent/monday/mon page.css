@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+ body{
+  padding:5px;
+  margin:0 auto;
+  width:900px;
+ }
+ 
+#title{
+  width:900px;
+  padding:0px;
+  
+}
+
+#titlebox{
+  margin-top:5px;
+  margin-bottom:10px;
+  width:900px; 
+  float:left;
+  padding:0px; 
+  
+}
+
+a{
+text-decoration: none;
+}
+
+ #titlebox>li,#category>li,#comiclist>li ,#comictext>li,ul{
+    list-style-type:none;
+    float:left;
+ }
+
+
+ #titlebox>li{
+ margin:10px;
+}
+
+
+#centertitle>div{
+ float:left;
+ margin:3px;
+ height:30px;
+}
+
+
+
+#category{
+margin:3px;
+width:240px;
+height:10px;
+padding:0 auto;
+float:right;
+
+}
+
+
+#category>li{
+margin:4px;
+font-size:0.5em;
+color:gray;
+padding:0px;
+
+}
+
+#category>li:nth-child(5),#category>li:nth-child(6){
+margin:0px;
+}
+
+hr{
+width:900px;
+margin-bottom:40px;
+}
+
+#comictxt>ul#liul{
+	float:left;
+	padding-left:0px;
+	width:850px;
+	
+
+	
+}
+
+
+#comictxt>ul #liul>li{
+	padding:0px;	
+	text-align:center;
+}
+
+ 
+#comictxt>hr{
+	margin-bottom:0px;
+}
+
+
+#comictxt>div #imgbiglst{
+	width:800px;
+	padding-right:30px;
+	
+}
+
+
+#comictxt>div #imglst{
+
+	float:left;
+	padding-left:10px;
+	padding-right:5px;
+}
+
+#comictxt>div #imglst>a>img{
+ float:left;
+ width:100px;
+ height:114px;	
+ margin:0 auto;
+ padding:0 auto;
+ 
+}
+
+
+
+#comictxt>div>#imgul{
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-left:10px;
+	margin-right:25px;
+	width:150px;
+	height:154px;
+	
+}
+

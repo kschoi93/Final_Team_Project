@@ -34,17 +34,41 @@
 	</ul>
 </div>
 <hr>
+<script>
+	$(function(){
+		/* 파일명을 설정해 주시면 아이프레임으로 나옵니다, href도 없애주셔야 합니당*/
+		 $("#monday").click(function(){
+			$("#iframeWebtoon").attr("src","monday/mon.html");
+		});
+		$("#tuesday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		});
+		/* $("#wednesday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		}); */
+		$("#thursday").click(function(){ //윤수형떙큐영~~~
+			$("#iframeWebtoon").attr("src","thursday/Thursday.html");
+		});
+		/* $("#friday").click(function(){
+			$("#iframeWebtoon").attr("src","tuesday/tuesday.html");
+		}); */
+	});
+	
+</script>
 <div id="section">
 	<div id="sectionLeft">
 		<div id="webtoonMenu">
 			<span id="allday"><a href="#" onclick="return false">요일전체</a></span>
 			<span class="spanDay" id="monday"><a href="#" onclick="return false">월요웹툰</a></span>
 			<span class="spanDay" id="tuesday"><a href="#" onclick="return false">화요웹툰</a></span>
-			<span class="spanDay" id="wednesday"><a href="#" onclick="return false">수요웹툰</a></span>
-			<span class="spanDay" id="thursday"><a href="#" onclick="return false">목요웹툰</a></span>
+			<span class="spanDay" id="wednesday"><a href="wednesday/wed.html">수요웹툰</a></span>
+			<span class="spanDay" id="thursday"><a href="#">목요웹툰</a></span>
 			<span class="spanDay" id="friday"><a href="#" onclick="return false">금요웹툰</a></span>
 			<span class="spanDay" id="saturday"><a href="#" onclick="return false">토요웹툰</a></span>
 			<span class="spanDay" id="sunday"><a href="#" onclick="return false">일요웹툰</a></span>
+		</div>
+		<div id="iframeDiv">
+			<iframe src="" width="700" height="2221" frameborder="0" scrolling="no" id="iframeWebtoon"></iframe>
 		</div>
 		<hr>
 		

@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body,ul,dt,dl,li,dd{
+    margin:0 auto;
+    padding:0;
+    font-family: 'Nanum Gothic', sans-serif; 
+
+}
+.wed> div{
+    width:694px;
+    margin:0 auto;
+    padding:0;
+}
+#topBanner>li:nth-child(1),#topBanner>li:nth-child(2){ 
+                height: 199.59;
+                margin-inline: 0 7px;
+                padding:0px;
+}
+#topBanner>li{margin-top:5px;}
+#sort{
+        text-align: right;
+        height: 20px;
+        width: 694px;
+}
+#sort>li{text-align: right;
+        float:right;}
+#sort img{width:19px; height:19px; padding:0;margin:0; float:right;}
+#viewBtn3, #viewBtn4{ display: none;}
+h3{
+    height:20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding:0;
+    margin:0;
+}
+#top img{
+    margin:0 auto;
+    width:218px;
+    height:120px;
+    padding-left:5px;
+}
+dt{font-size:0.8em;}
+#date, dd{
+    font-size:0.5em;
+    color:gray;
+}
+#view{border-bottom: 1px solid gray;}
+li{
+    list-style-type:none;
+    float: left;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+.star{color:red;}
+.viewName{font-size:0.7em; padding: 0 10px; margin: 0; line-height: 19px;}
+.num, .listDate{color:#555; margin-left:3px; font-size: 0.5em; font-weight: bold;}
+/*수요일 전체 웹툰 인기순*/
+/*이미지*/
+#wed_grid li{
+    margin-top: 20px;
+    width: 231px;
+    height: 115px;
+    float: left;
+    display: flex;
+}
+#wed_grid>div ,#wed_img, #wed_img img, #info{
+    width: 83px;
+    height: 90px; 
+}
+#list div{width: 90px;}
+#list dd, #list dt{margin-left:5px; white-space:no-wrap; overflow:hidden; text-overflow:ellipsis;width: 90px;}
+
+#list{
+    width:694px;
+    margin: 6px 0 0 ;
+    }
+#adImg{
+    width: 694px; 
+    height: 84px;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+#wed_name{
+    white-space:no-wrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
+#wed_author{
+    margin:4px 4px 4px 4px;
+    white-space:no-wrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
+#wed_author>a{color:gray;}
+
+/*List */
+tbody, tr, td{padding:0; margin:0 auto;}
+table, tbody,tr{width: 694px;}
+th{
+    border-top: 2px solid #eee; 
+    color:#474747; 
+    font-weight: bold; 
+    height:29px; 
+    text-align: center;    
+}
+th, td{
+    font-size: 0.8em; 
+    padding:10px 0 9px 14px; 
+    border-bottom: 1px solid #eee;
+    line-height: 18px;
+}
+#wed_list{display: none;}
+.listSubject, .listAuthor{font-weight: bold;}
