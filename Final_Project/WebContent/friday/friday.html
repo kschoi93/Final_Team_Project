@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+﻿<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<link rel="stylesheet" href="Friday.css" type="text/css"/>
+<script>
+$(function(){ 
+	//--------------------------------------------------# 상단 오늘 날짜 구하기  
+ 	var dateTime = new Date();
+	var timeTxt = dateTime.getFullYear()+".";
+		timeTxt += (dateTime.getMonth()+1)+".";
+		timeTxt += dateTime.getDate(); 
+
+	$("#timeText").append(timeTxt);  
+	//--------------------------------------------------# 컨텐츠 전체 사진, 설명 출력하기  
+    var tit = new Array('','외모지상주의','갓 오브 하이...','데드퀸','재혼황후','여성전용헬스장...','1초','개를 낳았다','삼국지톡','똑똑한 나 인증','사람의 조각','환상의 용','스포','세기말 풋사과...','더 게이머','낙향문사전','히어로 킬러','살人스타그램','뫼신 사냥꾼','걸어서 30분','냐한남자','플레이어','난약','상남자','A.I.닥터','복학생 정순이','구남친이 내게...','고래별','신상 미스터리...','성경의 역사','가슴털 로망스','감자마을','금혼령-조선혼...','소심한 팔레트','빨리감기','그 기사가 레...','닥터 프로스트...','피와 나비','후덜덜덜 남극...','도롱이','방과후 선녀','꽃 피우는 남자','몽홀','감히','도무지 그애는','구독금지','백년게임','진짜 정말 맹...','트럼프','나쁜 쪽으로','버그:스티그마','스윗솔티','히트포인트','강림전기 개정기','구주의 시간','매지컬 메디컬');
+    var aut = new Array('','박태준','박용제','김규삼','알파타르트/숨풀','유기','시니/광운','이선','무적핑크/이리','모죠/조용석','신의철/천범식','꼬마비','이강','순끼','성상영/상아','바킹독/고기산적','꿀벌/벌꿀','령','윤현승/방승현','이온도','올소','박종석/오현준','정현주/박진환','도가도','한산이가,ZAINO/...','한짜장','강하다/희똑','나윤희','신상윤','최경민/영모','갸오오','박지독','천지혜/산책','한민기','포르토/홍준기','성혜림/Ink.','이종범','레민','김민혁','사이사','이윤후','양하','장태산','희나리','게코','김이연','하람/지야','개차반/잠괴물','이채은','오은/이세릴','해마/송지형','달삐','민형/여강현','철무장미/장군','송극장','지공');
+    var sco = new Array('','9.46','9.65','9.96','9.97','8.87','9.98','9.97','9.93','9.85','9.88','9.85','9.90','9.97','8.56','9.93','9.84','9.59','9.90','9.98','9.98','9.91','9.96','9.88','9.94','9.96','9.83','9.98','9.74','9.38','9.92','9.88','9.96','9.96','9.90','9.82','9.97','9.95','9.94','9.97','9.95','9.96','9.92','9.89','9.94','9.91','9.76','9.91','9.97','9.79','7.05','9.97','9.40','9.71','9.88','9.87');
+	var tag="";
+	for(var i=1; i<=54; i++){
+		tag = "<div class='liBox'><a href='#' onclick='return false;'><img src='img/pic"+ i + ".PNG'"+"title='" + tit[i] + "'/></a>"; 
+		tag += "<ul class='picUl'><li><a href='#' id='descTit'  onclick='return false;' title='"+tit[i]+"'><strong>" + tit[i] + "</a></li>";
+		tag += "<li><a href='#'  id='descAut' onclick='return false;'>" + aut[i] + "</a></li>";	  
+		tag += "<li><span class='star3'>★★★★★ </span> <span class='score1'><strong>" + sco[i] + "</strong></span></li>"; 
+		tag += "<li><a href='#' onclick='return false;' id='all'>전체보기<img src='img/triangle.png'></a></li></ul></div>"; 
+		$('#desc').append(tag);  
+	}
+		   
+	 //--------------------------------------------------# 금요일에 업로드 표시하기
+	 var day = dateTime.getDay();
+	 
+	 var up="";
+	 if(day==5){
+		 up ="<img class='up' src='img/up.png'>"; 
+		 $('.picUl').append(up); 	 
+	 }  
+});
+</script>
+</head>
+<body>
+	<div id="top">
+		<div id="rec1">
+			<h3 class="title">금요 추천 웹툰</h3><div id="rec2">TODAY :</div><div id="timeText"></div> 
+		</div>
+		<div id="recMiddle"> 
+			<a onclick="return false;" href="#" title="백년게임"><img class="recPic" src="img/recPic1.PNG"/></a>
+			<a onclick="return false;" href="#" title="개를 낳았다"><img class="recPic" src="img/recPic2.PNG"/></a>
+			<a onclick="return false;" href="#" title="A.I.닥터"><img class="recPic" src="img/recPic3.PNG"/></a>			 
+			<a onclick="return false;" href="#" class="ti1" title="백년게임">백년게임</a>
+			<a onclick="return false;" href="#" class="ti1" title="개를 낳았다">개를 낳았다</a>
+			<a onclick="return false;" href="#" class="ti1" title="A.I.닥터">A.I.닥터</a><br/>	 
+			<a onclick="return false;" href="#" class="epi" title="31화">31화</a>
+			<a onclick="return false;" href="#" class="epi" title="시즌2 43화">시즌2 43화</a>
+			<a onclick="return false;" href="#" class="epi" title="34화">34화</a>	<br/>	 
+			<a onclick="return false;" href="#" class="aut" title="하람/지야">하람/지야</a>
+			<a onclick="return false;" href="#" class="aut" title="이선">이선</a>
+			<a onclick="return false;" href="#" class="aut" title="한산이가, ZAINO/...">한산이가,ZAINO/...</a>	<br/>			
+			<div class="score">
+				 <span class="star">★★★★★</span> <span class="star1"><strong>9.89</strong></span>
+				 <span class="star">★★★★★</span> <span class="star1"><strong>9.97</strong></span>
+				 <span class="star">★★★★★</span> <span class="star1" id="star2"><strong>9.94</strong></span> 
+			</div>
+			 		
+		</div> 
+	</div>
+	<div id="contents"></div>
+		<section id="topCont">
+			<h3 class="title">금요 전체 웹툰</h3> 
+				<ul id="sortBox">
+					<li class=sort>인기순</li>
+					<li class=sort>업데이트순</li>
+					<li class=sort>조회순</li>
+					<li class=sort>별점순</li>
+					<li id="picSort"><a href="#" onclick="return false;"><img title="썸네일형" src="img/thumbType.png"/></a></li>
+					<li id="listSort"><a href="#" onclick="return false;"><img title="리스트형" src="img/listType.png"/></a></li>
+			</ul> 
+		</section>
+		<section id="contBox">
+			<div id="desc"></div>
+		</section>
+	<div id="bottom"></div> 
+</body>
+</html>
