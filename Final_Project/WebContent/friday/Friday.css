@@ -8,7 +8,7 @@ a:hover{ text-decoration:underline;color:black; }
 a:active{ text-decoration:none;color:black; }
 #sortBox, .picUl>*, #recMiddle>ul>li{ list-style-type:none; }
 .score, .score1, #all, #descAut{   color:rgb(96,96,96); }
-
+ 
 /*상단 추천 웹툰*/
 #top{ padding: 0px; margin: 0px; }
 #rec2, .title, #recMiddle, .ti1, .aut, .epi, #star2, #sortBox, #picSort, #listSort, #timeText, .picUl, .picUl>li, .up{ position:relative; } 
